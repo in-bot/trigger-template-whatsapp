@@ -11,7 +11,9 @@ class SendTrigger {
                 dataClient: [
                     {
                         receiverPhone: `${customer.phone}`,
-                        variables: []
+                        variables: [],
+                        type_header: customer?.type_media,
+                        url_header: customer?.media_url,
                     }
                 ]
             };
@@ -24,7 +26,7 @@ class SendTrigger {
             if (customer.variable_7 !== null) params.dataClient[0].variables.push(customer.variable_7)
             if (customer.variable_8 !== null) params.dataClient[0].variables.push(customer.variable_8)
             if (customer.variable_9 !== null) params.dataClient[0].variables.push(customer.variable_9)
-            console.log(new Date(), `Payload: ${JSON.stringify(params)}`)
+            console.log(" %s payload enviado para o redis: %O", new Date(), params)
             redis.enqueueAndPublish("whatsapp", params);
         }
     }

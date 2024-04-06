@@ -1,0 +1,13 @@
+{
+    "botId": 403,
+    "templateId": "eduardo_img",
+    "senderPhone": "5511953188171",
+    "dataClient": [
+        {
+            "receiverPhone": "5511999113863",
+            "variables": [],
+            "type_header": "image",
+            "url_header": "https: //www.diariodocentrodomundo.com.br/wp-content/uploads/2021/03/corinthians_p000pmj_widexl-600x400.jpeg"
+        }
+    ]
+}
