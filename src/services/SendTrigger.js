@@ -8,6 +8,7 @@ class SendTrigger {
                 botId: dataCampaign.bot_id,
                 templateId: dataCampaign.template_name,
                 senderPhone: dataCampaign.phone_trigger,
+                payloads: [],
                 dataClient: [
                     {
                         receiverPhone: `${customer.phone}`,
@@ -17,6 +18,9 @@ class SendTrigger {
                     }
                 ]
             };
+            if (customer.payload_1 !== null) params.payloads.push(customer.payload_1)
+            if (customer.payload_2 !== null) params.payloads.push(customer.payload_2)
+            if (customer.payload_3 !== null) params.payloads.push(customer.payload_3)
             if (customer.variable_1 !== null) params.dataClient[0].variables.push(customer.variable_1)
             if (customer.variable_2 !== null) params.dataClient[0].variables.push(customer.variable_2)
             if (customer.variable_3 !== null) params.dataClient[0].variables.push(customer.variable_3)
