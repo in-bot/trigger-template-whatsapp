@@ -7,6 +7,7 @@ class SendTrigger {
             const params = {
                 botId: dataCampaign.bot_id,
                 templateId: dataCampaign.template_name,
+                triggerId: dataCampaign.id,
                 senderPhone: dataCampaign.phone_trigger,
                 payloads: [],
                 dataClient: [
