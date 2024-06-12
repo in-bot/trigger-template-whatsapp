@@ -1,0 +1,68 @@
+{
+    "content": [
+        {
+            "id": 1234,
+            "person": "EDUARDO OLIVEIRA",
+            "professional": "RONALDO DOS REIS AMERICO",
+            "status": "REQUESTED",
+            "statusMessage": "Agendado",
+            "type": "CONSULT_EVENT",
+            "unitName": "CENTRO MEDICO ESPECIALIDADES",
+            "source": "AGENDA_CALLCENTER",
+            "serviceName": "OTORRINOLARINGOLOGIA GERAL- CONSULTA",
+            "eventDate": "07/05/2024",
+            "eventTime": "13:00",
+            "phone": "5511999113863",
+            "itemAgendamentoId": 445,
+            "servicoId": null
+        },
+        {
+            "id": 1234,
+            "person": "CAROL CAMPOS",
+            "professional": "RONALDO DOS REIS AMERICO",
+            "status": "REQUESTED",
+            "statusMessage": "Agendado",
+            "type": "CONSULT_EVENT",
+            "unitName": "CENTRO MEDICO ESPECIALIDADES",
+            "source": "AGENDA_CALLCENTER",
+            "serviceName": "OTORRINOLARINGOLOGIA GERAL- CONSULTA",
+            "eventDate": "07/05/2024",
+            "eventTime": "13:00",
+            "phone": "5511999901940",
+            "itemAgendamentoId": 445,
+            "servicoId": null
+        },
+        {
+            "id": 1234,
+            "person": "ANDERSON VITORINO",
+            "professional": "RONALDO DOS REIS AMERICO",
+            "status": "REQUESTED",
+            "statusMessage": "Agendado",
+            "type": "CONSULT_EVENT",
+            "unitName": "CENTRO MEDICO ESPECIALIDADES",
+            "source": "AGENDA_CALLCENTER",
+            "serviceName": "OTORRINOLARINGOLOGIA GERAL- CONSULTA",
+            "eventDate": "07/05/2024",
+            "eventTime": "17:00",
+            "phone": "5511949022891",
+            "itemAgendamentoId": 445,
+            "servicoId": null
+        }
+    ],
+    "totalPages": 1,
+    "totalElements": 1,
+    "last": true,
+    "numberOfElements": 1,
+    "first": true,
+    "sort": [
+        {
+            "direction": "ASC",
+            "property": "scheduleTime",
+            "ignoreCase": false,
+            "nullHandling": "NATIVE",
+            "ascending": true
+        }
+    ],
+    "size": 20,
+    "number": 0
+}
