@@ -43,8 +43,8 @@ async function xptoRoutine() {
             console.log(customersConsult);
             // await HEVRepository.createTriggerHEVConsults("manha",20,customers)
             // await HEVRepository.createTriggerHEVConsults("tarde",21,customers)
-            await HEVRepository.createTriggerHEVConsults("manha",6,customersConsult)
-            await HEVRepository.createTriggerHEVConsults("tarde",11,customersConsult)
+            await HEVRepository.createTriggerHEVConsults("manha",7,customersConsult)
+            await HEVRepository.createTriggerHEVConsults("tarde",12,customersConsult)
         } catch (error) {
             console.log(error)            
         }
