@@ -205,7 +205,7 @@ module.exports = {
                             campaignId: `${resp.data.data.insertId}`,
                             phone: `${element.phone}`,
                             status: "aguardando",
-                            payload_1: "CONFIRM_AGENDA_EXAME "+findCustomField(element.customFields,"5c9d34e4d0942376b2a52a551678ffed"),
+                            payload_1: "CONFIRM_AGENDA_CONSULTA "+findCustomField(element.customFields,"5c9d34e4d0942376b2a52a551678ffed"),
                             payload_2: "CONFIRM_AGENDA_CONSULTA_NOSHOW "+findCustomField(element.customFields,"5c9d34e4d0942376b2a52a551678ffed"),
                             variable_1: element.name,
                             variable_2: findCustomField(element.customFields, 'd812476cf9628a594c72353babd6a24d'),
