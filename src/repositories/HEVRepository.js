@@ -23,9 +23,15 @@ module.exports = {
         };
 
         try {
+            const sleep = async function (seconds) {
+                let ms = seconds * 100;
+                await new Promise(resolve => setTimeout(() => resolve(), ms));
+            };
             const response = await axios.get("https://api.globalhealth.mv/prod/event/presence-confirmation/pending", { params, headers });
             const customers = []
-            response.data?.content.forEach(customer => {            
+            // response.data?.content.forEach(customer => { 
+            for (const customer of response.data?.content || []) {
+                sleep(1)           
                 const client = {
                     "botId": "571",
                     "phone": customer.phone,
@@ -46,7 +52,8 @@ module.exports = {
                 customers.push(client)
                 console.log(client);
                 this.createCustomerOnTable(client);
-            });
+            }
+                // });
             return customers;
         } catch (error) {
             console.error(error);
@@ -73,11 +80,17 @@ module.exports = {
         };
 
         try {
+            const sleep = async function (seconds) {
+                let ms = seconds * 100;
+                await new Promise(resolve => setTimeout(() => resolve(), ms));
+            };
             const response = await axios.get("https://api.globalhealth.mv/prod/event/presence-confirmation/pending", { params, headers });
             const customers = []
-            response.data?.content.forEach(customer => {
+            // response.data?.content.forEach(customer => {
+            for (const customer of response.data?.content || []) {
                 // console.log(confirmacao)
             // confirmacao.content?.forEach(customer => {
+                sleep(1)
                 const client = {
                     "botId": "571",
                     "phone": customer.phone,
@@ -98,7 +111,8 @@ module.exports = {
                 customers.push(client)
                 console.log(client);
                 this.createCustomerOnTable(client);
-            });
+            }
+                // });
             return customers;
         } catch (error) {
             console.error(error);
@@ -139,11 +153,12 @@ module.exports = {
         
         try {
             const sleep = async function (seconds) {
-                let ms = seconds * 1000;
+                let ms = seconds * 100;
                 await new Promise(resolve => setTimeout(() => resolve(), ms));
             };
             const resp = await axios.post('https://webhooks.inbot.com.br/inbot-adm-back/v1/gateway/whatsapp/trigger', data);
-            customers.forEach(async(element) => {
+            // customers.forEach(async(element) => {
+            for (const element of customers) {
                 sleep(1);
                 console.log("==============+++++++++++++++++++++++++++++")
                 console.log(element)
@@ -164,7 +179,8 @@ module.exports = {
                     await axios.post('https://webhooks.inbot.com.br/inbot-adm-back/v1/gateway/whats-customer', params);
                     console.log("Solicitação enviada com sucesso!");
                 }
-            })
+            }
+            // })
         } catch (error) {
             console.error("Erro ao enviar solicitação:", error);
         }
@@ -193,12 +209,13 @@ module.exports = {
         
         try {
             const sleep = async function (seconds) {
-                let ms = seconds * 1000;
+                let ms = seconds * 100;
                 await new Promise(resolve => setTimeout(() => resolve(), ms));
             };
             const resp = await axios.post('https://webhooks.inbot.com.br/inbot-adm-back/v1/gateway/whatsapp/trigger', data);
             console.log(customers)
-            customers.forEach(async(element) => {
+            // customers.forEach(async(element) => {
+            for (const element of customers) {
                 sleep(1);
                 console.log("==============+++++++++++++++++++++++++++++")
                 console.log(element)
@@ -220,7 +237,8 @@ module.exports = {
                     await axios.post('https://webhooks.inbot.com.br/inbot-adm-back/v1/gateway/whats-customer', params);
                     console.log("Solicitação enviada com sucesso!");
                 }
-            })
+            }
+            // })
         } catch (error) {
             console.error("Erro ao enviar solicitação:", error);
         }
