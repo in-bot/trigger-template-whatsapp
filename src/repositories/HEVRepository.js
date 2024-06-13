@@ -1,5 +1,5 @@
 const axios = require("axios").default;
-const confirmacao = require("../mock/confirmacao.json");
+const confirmacao = require("../mock/confirmacao2.json");
 
 module.exports = {
     async getClientsWithAppointmentsTomorrow() {
@@ -25,7 +25,7 @@ module.exports = {
         try {
             const response = await axios.get("https://api.globalhealth.mv/prod/event/presence-confirmation/pending", { params, headers });
             const customers = []
-            response.data?.content.forEach(customer => {
+            response.data?.content.forEach(customer => {            
                 const client = {
                     "botId": "571",
                     "phone": customer.phone,
@@ -76,6 +76,8 @@ module.exports = {
             const response = await axios.get("https://api.globalhealth.mv/prod/event/presence-confirmation/pending", { params, headers });
             const customers = []
             response.data?.content.forEach(customer => {
+                // console.log(confirmacao)
+            // confirmacao.content?.forEach(customer => {
                 const client = {
                     "botId": "571",
                     "phone": customer.phone,
@@ -195,6 +197,7 @@ module.exports = {
                 await new Promise(resolve => setTimeout(() => resolve(), ms));
             };
             const resp = await axios.post('https://webhooks.inbot.com.br/inbot-adm-back/v1/gateway/whatsapp/trigger', data);
+            console.log(customers)
             customers.forEach(async(element) => {
                 sleep(1);
                 console.log("==============+++++++++++++++++++++++++++++")
@@ -209,8 +212,9 @@ module.exports = {
                             payload_2: "CONFIRM_AGENDA_CONSULTA_NOSHOW "+findCustomField(element.customFields,"5c9d34e4d0942376b2a52a551678ffed"),
                             variable_1: element.name,
                             variable_2: findCustomField(element.customFields, 'd812476cf9628a594c72353babd6a24d'),
-                            variable_3: findCustomField(element.customFields, '164ea54dbf04bacaeb327f5368c49873'),
-                            variable_4: findCustomField(element.customFields, '8faabc197fea7cf8e7b04e5d8fb8c0b0')
+                            variable_3: findCustomField(element.customFields, 'c03f10ddbf4132cd539d728ca3c9334c'),
+                            variable_4: findCustomField(element.customFields, '164ea54dbf04bacaeb327f5368c49873'),
+                            variable_5: findCustomField(element.customFields, '8faabc197fea7cf8e7b04e5d8fb8c0b0')
                         };
 
                     await axios.post('https://webhooks.inbot.com.br/inbot-adm-back/v1/gateway/whats-customer', params);

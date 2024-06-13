@@ -1,5 +1,6 @@
 require("dotenv").config({ path: ".env" });
 const redis = require("./services/redis")
+const confirmacao = require("./mock/confirmacao2.json");
 
 const TemplateTriggerRepository = require("./repositories/TemplateTriggerRepository");
 const SendTrigger = require("./services/SendTrigger");
@@ -34,14 +35,14 @@ async function xptoRoutine() {
             console.log("Proccess started")
             const customers = await HEVRepository.getClientsWithAppointmentsTomorrow();
             console.log("Criar disparo exame!!!");
-            console.log(customers);
+            // console.log(customers);
             // await HEVRepository.createTriggerHEV("manha",20,customers)
             // await HEVRepository.createTriggerHEV("tarde",21,customers)
             await HEVRepository.createTriggerHEV("manha",6,customers)
             await HEVRepository.createTriggerHEV("tarde",11,customers)
             console.log("Criar disparo consulta!!!");
             const customersConsult = await HEVRepository.getClientsWithAppointmentsConsultsTomorrow();
-            console.log(customersConsult);
+            // console.log(customersConsult);
             // await HEVRepository.createTriggerHEVConsults("manha",20,customers)
             // await HEVRepository.createTriggerHEVConsults("tarde",21,customers)
             await HEVRepository.createTriggerHEVConsults("manha",7,customersConsult)
@@ -54,4 +55,4 @@ async function xptoRoutine() {
 
 }
 
-setInterval(xptoRoutine, 60000);
+setInterval(xptoRoutine, 20000);
