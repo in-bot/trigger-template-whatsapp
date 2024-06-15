@@ -24,7 +24,11 @@ async function xptoRoutine() {
         return hours * 60 + minutes;
     }
 
-    const timeString = time.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+    // const timeString = time.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+
+    const hours = String(time.getHours()).padStart(2, '0');
+    const minutes = String(time.getMinutes()).padStart(2, '0');
+    const timeString = `${hours}:${minutes}`;
     console.log(new Date(), `timeString: ${timeString}`)
     const comparisonTime = "8:00"; //HORARIO CORRETO
     // const comparisonTime = "15:21"; //HORARIO teste
