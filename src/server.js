@@ -27,7 +27,7 @@ async function xptoRoutine() {
     const timeString = time.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
 
     console.log(new Date(), `timeString: ${timeString}`)
-    const comparisonTime = "8:00 AM"; //HORARIO CORRETO
+    const comparisonTime = "08:00 AM"; //HORARIO CORRETO
     // const comparisonTime = "15:21"; //HORARIO teste
     
 
