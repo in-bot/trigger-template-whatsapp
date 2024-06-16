@@ -24,14 +24,34 @@ async function xptoRoutine() {
         return hours * 60 + minutes;
     }
 
-    const timeString = time.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+    // const timeString = time.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
 
-    console.log(new Date(), `timeString: ${timeString}`)
-    const comparisonTime = "08:00 AM"; //HORARIO CORRETO
+    const hours = String(time.getHours()).padStart(2, '0');
+    const minutes = String(time.getMinutes()).padStart(2, '0');
+    const timeString = `${hours}:${minutes}`;
+    // console.log(new Date(), `timeString: ${timeString}`)
+    const comparisonTime = "8:15"; //HORARIO CORRETO
     // const comparisonTime = "15:21"; //HORARIO teste
+    function convertTo24Hour(timeString) {
+        const [time, modifier] = timeString.split(' ');
+        let [hours, minutes] = time.split(':');
+    
+        if (modifier === 'PM' && hours !== '12') {
+            hours = parseInt(hours, 10) + 12;
+        } else if (modifier === 'AM' && hours === '12') {
+            hours = '00';
+        }
+    
+        return `${hours}:${minutes}`;
+    }
+    
+    // const timeString = "06:45 PM";
+    const timeIn24HourFormat = convertTo24Hour(timeString);
+    
+    console.log(new Date(), `timeString: ${timeIn24HourFormat}`);
     
 
-    if (timeToMinutes(timeString) === timeToMinutes(comparisonTime)) {
+    if (timeToMinutes(timeIn24HourFormat) === timeToMinutes(comparisonTime)) {
         try {            
             console.log("Proccess started")
             const customers = await HEVRepository.getClientsWithAppointmentsTomorrow();
