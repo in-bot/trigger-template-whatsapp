@@ -30,7 +30,7 @@ async function xptoRoutine() {
     const minutes = String(time.getMinutes()).padStart(2, '0');
     const timeString = `${hours}:${minutes}`;
     // console.log(new Date(), `timeString: ${timeString}`)
-    const comparisonTime = "8:15"; //HORARIO CORRETO
+    const comparisonTime = "8:20"; //HORARIO CORRETO
     // const comparisonTime = "15:21"; //HORARIO teste
     function convertTo24Hour(timeString) {
         const [time, modifier] = timeString.split(' ');
