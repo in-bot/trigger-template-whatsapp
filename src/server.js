@@ -5,6 +5,7 @@ const confirmacao = require("./mock/confirmacao2.json");
 const TemplateTriggerRepository = require("./repositories/TemplateTriggerRepository");
 const SendTrigger = require("./services/SendTrigger");
 const HEVRepository = require("./repositories/HEVRepository");
+const triggerRulesOrganicosDeFatima = require("./trigger/OrganicosDeFatima");
 
 async function xptoRoutine() {
     const sendTrigger = new SendTrigger();
@@ -73,6 +74,7 @@ async function xptoRoutine() {
         }
     }
 
+    // triggerRulesOrganicosDeFatima();
 
 }
 

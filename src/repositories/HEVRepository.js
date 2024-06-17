@@ -31,7 +31,7 @@ module.exports = {
             const customers = []
             // response.data?.content.forEach(customer => { 
             for (const customer of response.data?.content || []) {
-                sleep(5)           
+                await sleep(5)           
                 const client = {
                     "botId": "571",
                     "phone": customer.phone,
@@ -90,7 +90,7 @@ module.exports = {
             for (const customer of response.data?.content || []) {
                 // console.log(confirmacao)
             // confirmacao.content?.forEach(customer => {
-                sleep(5)
+                await sleep(5)
                 const client = {
                     "botId": "571",
                     "phone": customer.phone,
@@ -159,7 +159,7 @@ module.exports = {
             const resp = await axios.post('https://webhooks.inbot.com.br/inbot-adm-back/v1/gateway/whatsapp/trigger', data);
             // customers.forEach(async(element) => {
             for (const element of customers) {
-                sleep(5);
+                await sleep(5);
                 console.log("==============+++++++++++++++++++++++++++++")
                 console.log(element)
                 const correctTime = findCustomField(element.customFields, '8faabc197fea7cf8e7b04e5d8fb8c0b0')
@@ -216,7 +216,7 @@ module.exports = {
             console.log(customers)
             // customers.forEach(async(element) => {
             for (const element of customers) {
-                sleep(5);
+                await sleep(5);
                 console.log("==============+++++++++++++++++++++++++++++")
                 console.log(element)
                 const correctTime = findCustomField(element.customFields, '8faabc197fea7cf8e7b04e5d8fb8c0b0')
