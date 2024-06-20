@@ -28,9 +28,16 @@ const sleep = async (seconds) => {
     await new Promise(resolve => setTimeout(() => resolve(), ms));
 };
 
+const sumQtyDay = (qtyDay) => {
+    const date = new Date();
+    date.setDate(date.getDate() + qtyDay);
+    return date.toISOString().split('T')[0];
+}
+
 module.exports = {
     timeToMinutes,
     convertTo24Hour,
     timeString,
-    sleep
+    sleep,
+    sumQtyDay
 }

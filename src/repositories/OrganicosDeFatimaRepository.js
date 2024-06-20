@@ -1,0 +1,57 @@
+const axios = require("axios");
+const fetchAllPagesCustomer = require("./OrganicosDeFatimaRepository2");
+
+const fetchPage = async (input) => {
+  const auth_token = "375bbc5a520794ee5690bf65296157547d39e9df";
+  const base_url = "https://api.tiny.com.br/api2";
+  let requestOptions = {
+    method: "post",
+    maxBodyLength: Infinity,
+    url: `${base_url}/contatos.pesquisa.php`,
+    headers: {
+      "Content-Type": "application/x-www-form-urlencoded",
+    },
+    data: {
+      formato: "JSON",
+      token: auth_token,
+      pesquisa: "",
+    },
+  };
+  requestOptions.data.pesquisa = input?.nome;
+  try {
+    const resp = await axios(requestOptions);
+    if(resp.data.retorno.status==="Erro"){
+        return;
+    }
+    const body = resp?.data?.retorno?.contatos[0]?.contato;
+    input.id_contato = body.id;
+    input.fone = body.fone.replace("(","55").replace(")","").replace(" ","").replace("-","");
+    input.cpf_cnpj = body.cpf_cnpj;
+    return input;
+  } catch (err) {
+    console.log(err)  }
+};
+
+const fetchAllPages = async () => {
+  let arr = [];
+  const mergedResponses = await fetchAllPagesCustomer();
+  console.log(mergedResponses)
+  for (let i = 0; i < mergedResponses.length; i++) {
+    const arrValues = await fetchPage(mergedResponses[i])
+    if(arrValues!==undefined && arrValues?.cpf_cnpj!=="" && arrValues?.fone!==""){
+      arr.push(arrValues)
+      console.log(new Date(), `Customer: ${JSON.stringify(arrValues)}`)
+    }
+  }
+  return arr;
+};
+
+module.exports = {
+  fetchAllPages
+}
+
+// (async () => {
+//   const values = await fetchAllPages();
+//   console.log(values);
+//   console.log(values.length);
+// })();

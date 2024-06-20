@@ -1,10 +1,11 @@
 const axios = require("axios").default;
-const confirmacao = require("../mock/confirmacao2.json");
+// const confirmacao = require("../mock/confirmacao2.json");
+const util = require("../utils/util")
 
 module.exports = {
-    async getClientsWithAppointmentsTomorrow() {
+    async getClientsWithAppointmentsTomorrow(qtyDay,evenType) {
         const date = new Date();
-        date.setDate(date.getDate() + 1);
+        date.setDate(date.getDate() + qtyDay);
         const formattedDate = date.toISOString().split('T')[0];
 
         const params = {
@@ -13,7 +14,7 @@ module.exports = {
             sort: 'scheduleTime,asc',
             timeZone: 'America/Sao_Paulo',
             date: formattedDate,
-            types: 'LABORATORY_EVENT,IMAGE_EVENT',
+            types: evenType,
             itemAgendamentoIds: '',
             servicoIds: ''
         };
@@ -23,15 +24,12 @@ module.exports = {
         };
 
         try {
-            const sleep = async function (seconds) {
-                let ms = seconds * 100;
-                await new Promise(resolve => setTimeout(() => resolve(), ms));
-            };
+
             const response = await axios.get("https://api.globalhealth.mv/prod/event/presence-confirmation/pending", { params, headers });
             const customers = []
             // response.data?.content.forEach(customer => { 
-            for (const customer of response.data?.content || []) {
-                await sleep(5)           
+            for (const customer of response.data.content) {
+                await util.sleep(5)           
                 const client = {
                     "botId": "571",
                     "phone": customer.phone,
@@ -59,66 +57,7 @@ module.exports = {
             console.error(error);
         }
     },
-    async getClientsWithAppointmentsConsultsTomorrow() {
-        const date = new Date();
-        date.setDate(date.getDate() + 1);
-        const formattedDate = date.toISOString().split('T')[0];
-
-        const params = {
-            page: 0,
-            size: 10000,
-            sort: 'scheduleTime,asc',
-            timeZone: 'America/Sao_Paulo',
-            date: formattedDate,
-            types: 'CONSULT_EVENT',
-            itemAgendamentoIds: '',
-            servicoIds: ''
-        };
-
-        const headers = {
-            'x-api-key': 'hev#0997ad1680694aeaaa44d6654e3f4607'
-        };
-
-        try {
-            const sleep = async function (seconds) {
-                let ms = seconds * 100;
-                await new Promise(resolve => setTimeout(() => resolve(), ms));
-            };
-            const response = await axios.get("https://api.globalhealth.mv/prod/event/presence-confirmation/pending", { params, headers });
-            const customers = []
-            // response.data?.content.forEach(customer => {
-            for (const customer of response.data?.content || []) {
-                // console.log(confirmacao)
-            // confirmacao.content?.forEach(customer => {
-                await sleep(5)
-                const client = {
-                    "botId": "571",
-                    "phone": customer.phone,
-                    "name": customer.person,
-                    "customFields": [
-                        { "id": "164ea54dbf04bacaeb327f5368c49873", "value": customer.eventDate },
-                        { "id": "8faabc197fea7cf8e7b04e5d8fb8c0b0", "value": customer.eventTime },
-                        { "id": "c5a83ce5b026f681d191160e605b357d", "value": customer.itemAgendamentoId },
-                        { "id": "4b83a59e8c3bddec461cc08c1d56083d", "value": "" },
-                        { "id": "5c9d34e4d0942376b2a52a551678ffed", "value": customer.id },
-                        { "id": "d812476cf9628a594c72353babd6a24d", "value": customer.serviceName },
-                        { "id": "1c9eceadf8b47b3688687c7aa9e3161d", "value": customer.type },
-                        { "id": "7fd4f1674105ce9b120119b66f494953", "value": customer.statusMessage },
-                        { "id": "c03f10ddbf4132cd539d728ca3c9334c", "value": customer.professional },
-                        { "id": "89133f9b80d96b7a9cc954dcc153bb24", "value": "" }
-                    ]
-                };
-                customers.push(client)
-                console.log(client);
-                this.createCustomerOnTable(client);
-            }
-                // });
-            return customers;
-        } catch (error) {
-            console.error(error);
-        }
-    },
-    
+        
     createCustomerOnTable(client) {
         const headers = {
             'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJib3RfaWQiOjU3MSwiaWF0IjoxNzE3NDQwMjE2fQ.hfp_mKgnDpioTHUzhDI6Zy59sCi05tO-CWDgdLdVwHE'
@@ -129,15 +68,11 @@ module.exports = {
             .catch(error => console.log(error));
     },
     
-    async createTriggerHEV(periodo, hour, customers) {
+    async createTriggerHEV(periodo, hour, minute, customers) {
         const findCustomField = (fields, id) => fields.find(field => field.id === id)?.value || '';
-        function timeToMinutes(time) {
-            const [hours, minutes] = time.split(':').map(Number);
-            return hours * 60 + minutes;
-        }
         const date = Math.floor(new Date().getTime() / 1000);
         const horario = new Date();
-        horario.setHours(hour, 0, 0);
+        horario.setHours(hour, minute, 0);
         
         const data = {
             "campaignName": `confirma_presenca_exame_v1_${date}_${periodo}`,
@@ -152,18 +87,14 @@ module.exports = {
         console.log(data);
         
         try {
-            const sleep = async function (seconds) {
-                let ms = seconds * 100;
-                await new Promise(resolve => setTimeout(() => resolve(), ms));
-            };
             const resp = await axios.post('https://webhooks.inbot.com.br/inbot-adm-back/v1/gateway/whatsapp/trigger', data);
             // customers.forEach(async(element) => {
-            for (const element of customers) {
-                await sleep(5);
+                for (const element of customers) {
+                await util.sleep(5)
                 console.log("==============+++++++++++++++++++++++++++++")
                 console.log(element)
                 const correctTime = findCustomField(element.customFields, '8faabc197fea7cf8e7b04e5d8fb8c0b0')
-                    if((periodo==="manha" && timeToMinutes(correctTime) < timeToMinutes("13:01")) || (periodo==="tarde" && timeToMinutes(correctTime) > timeToMinutes("13:00"))){
+                    if((periodo==="manha" && util.timeToMinutes(correctTime) < util.timeToMinutes("13:01")) || (periodo==="tarde" && util.timeToMinutes(correctTime) > util.timeToMinutes("13:00"))){
                         const params = {
                             campaignId: `${resp.data.data.insertId}`,
                             phone: `${element.phone}`,
@@ -185,15 +116,11 @@ module.exports = {
             console.error("Erro ao enviar solicitação:", error);
         }
     },
-    async createTriggerHEVConsults(periodo, hour, customers) {
+    async createTriggerHEVConsults(periodo, hour, minute, customers) {
         const findCustomField = (fields, id) => fields.find(field => field.id === id)?.value || '';
-        function timeToMinutes(time) {
-            const [hours, minutes] = time.split(':').map(Number);
-            return hours * 60 + minutes;
-        }
         const date = Math.floor(new Date().getTime() / 1000);
         const horario = new Date();
-        horario.setHours(hour, 0, 0);
+        horario.setHours(hour, minute, 0);
         
         const data = {
             "campaignName": `confirma_presenca_consulta_v1_${date}_${periodo}`,
@@ -208,19 +135,15 @@ module.exports = {
         console.log(data);
         
         try {
-            const sleep = async function (seconds) {
-                let ms = seconds * 100;
-                await new Promise(resolve => setTimeout(() => resolve(), ms));
-            };
             const resp = await axios.post('https://webhooks.inbot.com.br/inbot-adm-back/v1/gateway/whatsapp/trigger', data);
             console.log(customers)
             // customers.forEach(async(element) => {
             for (const element of customers) {
-                await sleep(5);
+                await util.sleep(5);
                 console.log("==============+++++++++++++++++++++++++++++")
                 console.log(element)
                 const correctTime = findCustomField(element.customFields, '8faabc197fea7cf8e7b04e5d8fb8c0b0')
-                    if((periodo==="manha" && timeToMinutes(correctTime) < timeToMinutes("13:01")) || (periodo==="tarde" && timeToMinutes(correctTime) > timeToMinutes("13:00"))){
+                    if((periodo==="manha" && util.timeToMinutes(correctTime) < util.timeToMinutes("13:01")) || (periodo==="tarde" && util.timeToMinutes(correctTime) > util.timeToMinutes("13:00"))){
                         const params = {
                             campaignId: `${resp.data.data.insertId}`,
                             phone: `${element.phone}`,

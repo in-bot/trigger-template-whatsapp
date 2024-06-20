@@ -1,65 +1,91 @@
 const util = require("../utils/util")
+const axios = require("axios");
+const organicos = require("../repositories/OrganicosDeFatimaRepository")
+const mock = require("../mock/organicos.json")
+
+const createCustomerOnTable = (client) => {
+    const headers = {
+        'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJib3RfaWQiOjc1MiwiaWF0IjoxNzE4Njc0NjE0fQ.0Kb-sVvHklRvDaFOtCt0YKgUWP9O0brh9Ha0-QMNf14'
+    };
+
+    axios.post("https://api.inbot.com.br/user-manager/v1/customer", client, { headers })
+        .then(resp => console.log(resp.data))
+        .catch(error => console.log(error.data));
+};
 
 async function triggerRulesOrganicosDeFatima() {
-    const comparisonTime = "15:12"; //HORARIO CORRETO
+    const comparisonTime = "16:35"; //HORARIO CORRETO
     const timeString = util.timeString();
     const timeIn24HourFormat = util.convertTo24Hour(timeString);
-    
     if (util.timeToMinutes(timeIn24HourFormat) === util.timeToMinutes(comparisonTime)) {
-        console.log("Disparo")
+
+        const clients = [];
+        const customers = await organicos.fetchAllPages();
+        console.log(customers)
+        console.log(customers.length)
+        for (const customer of customers) {
+            await util.sleep(5) 
+            const client = {
+                "botId": "752",
+                "phone": customer.fone,
+                "name": customer.nome,
+                "customFields": [
+                    { "id": "5fd0b60d176e7280b45137e59a0a5c47", "value": customer.cpf_cnpj },
+                    { "id": "164a97709ab8b38a924f5e294cacc01b", "value": customer.id },
+                    { "id": "e8d2ebd87fc532e758a2219ebe91581f", "value": customer.status },
+                    { "id": "8f6b1db53b5f7a8e3262035c24001509", "value": new Date() },
+                    { "id": "a8583aa41ecc54f905cf7920b3c42f31", "value": "" },
+                    { "id": "a9021f78304e4e7632f8288057783e76", "value": "" },
+                    { "id": "c754f12ab4af5b3e73a34c5996ead8cd", "value": "" } 
+                ]
+            };
+            console.log(client)
+            clients.push(client);
+            await createCustomerOnTable(client)
+        }
+    // createTriggerOrganicos(9, clients)
     }
 };
 
-async function createTriggerHEV(periodo, hour, customers, step) {
+async function createTriggerOrganicos(hour, customers) {
+
     const findCustomField = (fields, id) => fields.find(field => field.id === id)?.value || '';
-    function timeToMinutes(time) {
-        const [hours, minutes] = time.split(':').map(Number);
-        return hours * 60 + minutes;
-    }
     const date = Math.floor(new Date().getTime() / 1000);
     const horario = new Date();
     horario.setHours(hour, 0, 0);
     
     const data = {
-        "campaignName": `onboarding_${step}_${date}`,
-        "templateName": `campanha_+${step}`,
+        "campaignName": `base_cliente_${date}`,
+        "templateName": `base_cliente`,
         "typeTrigger": "agendado",
         "timeTrigger": horario,
         "status": "aguardando",
-        "botId": 744,
-        "phoneTrigger": '551151285447'
+        "botId": 752,
+        "phoneTrigger": '5521966056479'
     };
     
     console.log(data);
     
     try {
-        const sleep = async function (seconds) {
-            let ms = seconds * 100;
-            await new Promise(resolve => setTimeout(() => resolve(), ms));
-        };
+
         const resp = await axios.post('https://webhooks.inbot.com.br/inbot-adm-back/v1/gateway/whatsapp/trigger', data);
-        // customers.forEach(async(element) => {
-        for (const element of customers) {
-            await sleep(5);
+        mock.forEach(async(element) => {
+        // for (const element of customers) {
+            await util.sleep(5);
             console.log("==============+++++++++++++++++++++++++++++")
             console.log(element)
-            const correctTime = findCustomField(element.customFields, '8faabc197fea7cf8e7b04e5d8fb8c0b0')
+            // const correctTime = findCustomField(element.customFields, '8faabc197fea7cf8e7b04e5d8fb8c0b0')
             const params = {
                 campaignId: `${resp.data.data.insertId}`,
-                phone: `${element.phone}`,
+                phone: `${element.fone}`,
                 status: "aguardando",
-                payload_1: "CONFIRM_AGENDA_EXAME "+findCustomField(element.customFields,"5c9d34e4d0942376b2a52a551678ffed"),
-                payload_2: "CONFIRM_AGENDA_EXAME_NOSHOW "+findCustomField(element.customFields,"5c9d34e4d0942376b2a52a551678ffed"),
-                variable_1: element.name,
-                variable_2: findCustomField(element.customFields, 'd812476cf9628a594c72353babd6a24d'),
-                variable_3: findCustomField(element.customFields, '164ea54dbf04bacaeb327f5368c49873'),
-                variable_4: findCustomField(element.customFields, '8faabc197fea7cf8e7b04e5d8fb8c0b0')
+                payload_1: "VER_DETALHES " + element?.cpf_cnpj,
             };
 
                 await axios.post('https://webhooks.inbot.com.br/inbot-adm-back/v1/gateway/whats-customer', params);
                 console.log("Solicitação enviada com sucesso!");
-            }
-        // })
+            // }
+        })
     } catch (error) {
         console.error("Erro ao enviar solicitação:", error);
     }
