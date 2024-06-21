@@ -1,7 +1,7 @@
 const redis = require("./redis")
 
 class SendTrigger {
-    send(dataCustomer, dataCampaign) {
+    async send(dataCustomer, dataCampaign) {
         for (const customer of dataCustomer) {
             console.log(dataCampaign)
             const params = {
@@ -32,7 +32,11 @@ class SendTrigger {
             if (customer.variable_8 !== null) params.dataClient[0].variables.push(customer.variable_8)
             if (customer.variable_9 !== null) params.dataClient[0].variables.push(customer.variable_9)
             console.log(" %s payload enviado para o redis: %O", new Date(), params)
-            redis.enqueueAndPublish("whatsapp", params);
+            try {
+                await redis.enqueueAndPublish("whatsapp", params);
+            } catch (error) {
+                console.error("Erro ao enfileirar e publicar para o Redis:", error);
+            }
         }
     }
 }

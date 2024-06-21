@@ -27,9 +27,9 @@ module.exports = {
 
             const response = await axios.get("https://api.globalhealth.mv/prod/event/presence-confirmation/pending", { params, headers });
             const customers = []
+            if(response?.data?.content.length > 0){
             // response.data?.content.forEach(customer => { 
             for (const customer of response.data.content) {
-                await util.sleep(5)           
                 const client = {
                     "botId": "571",
                     "phone": customer.phone,
@@ -48,9 +48,8 @@ module.exports = {
                     ]
                 };
                 customers.push(client)
-                console.log(client);
-                this.createCustomerOnTable(client);
             }
+        }
                 // });
             return customers;
         } catch (error) {
@@ -58,12 +57,12 @@ module.exports = {
         }
     },
         
-    createCustomerOnTable(client) {
+    async createCustomerOnTable(client) {
         const headers = {
             'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJib3RfaWQiOjU3MSwiaWF0IjoxNzE3NDQwMjE2fQ.hfp_mKgnDpioTHUzhDI6Zy59sCi05tO-CWDgdLdVwHE'
         };
 
-        axios.post("https://api.inbot.com.br/user-manager/v1/customer", client, { headers })
+        await axios.post("https://api.inbot.com.br/user-manager/v1/customer", client, { headers })
             .then(resp => console.log(resp.data))
             .catch(error => console.log(error));
     },
@@ -88,13 +87,15 @@ module.exports = {
         
         try {
             const resp = await axios.post('https://webhooks.inbot.com.br/inbot-adm-back/v1/gateway/whatsapp/trigger', data);
+            if(customers.length > 0){
             // customers.forEach(async(element) => {
                 for (const element of customers) {
-                await util.sleep(5)
+                await util.sleep(2)
                 console.log("==============+++++++++++++++++++++++++++++")
                 console.log(element)
                 const correctTime = findCustomField(element.customFields, '8faabc197fea7cf8e7b04e5d8fb8c0b0')
                     if((periodo==="manha" && util.timeToMinutes(correctTime) < util.timeToMinutes("13:01")) || (periodo==="tarde" && util.timeToMinutes(correctTime) > util.timeToMinutes("13:00"))){
+                        await this.createCustomerOnTable(element);
                         const params = {
                             campaignId: `${resp.data.data.insertId}`,
                             phone: `${element.phone}`,
@@ -111,6 +112,7 @@ module.exports = {
                     console.log("Solicitação enviada com sucesso!");
                 }
             }
+        }
             // })
         } catch (error) {
             console.error("Erro ao enviar solicitação:", error);
