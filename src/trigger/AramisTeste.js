@@ -15,12 +15,12 @@ async function triggerRulesAramisTestes() {
             createTriggerAramis(5,0, "customers", "03", "ONB_3_EXP_LOJA", util.sumQtyDay(2));
             createTriggerAramis(5,0, "customers", "04", "ONB_4_PONTO", util.sumQtyDay(3));
             createTriggerAramis(5,0, "customers", "05", "ONB_5_PERFORM", util.sumQtyDay(4));
-            createTriggerAramis(5,0, "customers", "06", "ONB_6_PILAR1", util.sumQtyDay(5));
-            createTriggerAramis(5,0, "customers", "07", "ONB_7_HISTORIA", util.sumQtyDay(6));
-            createTriggerAramis(5,0, "customers", "08", "ONB_8_ARAMIS", util.sumQtyDay(7));
-            createTriggerAramis(5,0, "customers", "09", "ONB_9_LINHAS", util.sumQtyDay(8));
-            createTriggerAramis(5,0, "customers", "010", "ONB_10_LIDERANCA", util.sumQtyDay(9));
-            createTriggerAramis(5,0, "customers", "11", "MENU_SUSTENTABILIDADE_BOTOES", util.sumQtyDay(10));
+            createTriggerAramis(5,0, "customers", "06", "ONB_6_PILAR1", util.sumQtyDay(7));
+            createTriggerAramis(5,0, "customers", "07", "ONB_7_HISTORIA", util.sumQtyDay(8));
+            createTriggerAramis(5,0, "customers", "08", "ONB_8_ARAMIS", util.sumQtyDay(9));
+            createTriggerAramis(5,0, "customers", "09", "ONB_9_LINHAS", util.sumQtyDay(10));
+            createTriggerAramis(5,0, "customers", "010", "ONB_10_LIDERANCA", util.sumQtyDay(13));
+            createTriggerAramis(5,0, "customers", "11", "MENU_SUSTENTABILIDADE_BOTOES", util.sumQtyDay(13));
             createTriggerAramis(14,0, "customers", "formulario", "ONB_AV_INST_P1", util.sumQtyDay(1));
             createTriggerAramis(14,0, "customers", "formulario", "ONB_AV_INST_P1", util.sumQtyDay(2));
     }

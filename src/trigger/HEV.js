@@ -14,13 +14,12 @@ async function triggerRulesHEV() {
             console.log("Proccess started")
             const customers = await HEVRepository.getClientsWithAppointmentsTomorrow(3,'LABORATORY_EVENT,IMAGE_EVENT'); // Pega exame
             console.log("Criar disparo exame D+3!!!");
-            await HEVRepository.createTriggerHEV("manha",6,0,customers)
-            const customersNextDay = await HEVRepository.getClientsWithAppointmentsTomorrow(1,'LABORATORY_EVENT,IMAGE_EVENT'); // Pega exame
-            console.log("Criar disparo exame dia seguinte!!!");
-            await HEVRepository.createTriggerHEV("manha",6,0,customersNextDay)
+            if(customers.length > 0 )
+                await HEVRepository.createTriggerHEV("manha",6,0,customers)
             console.log("Criar disparo consulta!!!");
             const customersConsult = await HEVRepository.getClientsWithAppointmentsTomorrow(1,'CONSULT_EVENT'); // Pega consulta
-            await HEVRepository.createTriggerHEVConsults("manha",6,5,customersConsult)
+            if(customersConsult.length > 0 )
+                await HEVRepository.createTriggerHEVConsults("manha",6,5,customersConsult)
         } catch (error) {
             console.log(error)            
         }
@@ -30,13 +29,12 @@ async function triggerRulesHEV() {
             console.log("Proccess started")
             const customers = await HEVRepository.getClientsWithAppointmentsTomorrow(3,'LABORATORY_EVENT,IMAGE_EVENT');
             console.log("Criar disparo exame D+3 dias!!!");
-            await HEVRepository.createTriggerHEV("tarde",11,0,customers)
-            const customersNextDay = await HEVRepository.getClientsWithAppointmentsTomorrow(1,'LABORATORY_EVENT,IMAGE_EVENT');
-            console.log("Criar disparo exame dia seguinte!!!");
-            await HEVRepository.createTriggerHEV("tarde",11,0,customersNextDay)
+            if(customers.length > 0 )
+                await HEVRepository.createTriggerHEV("tarde",11,0,customers)
             console.log("Criar disparo consulta!!!");
             const customersConsult = await HEVRepository.getClientsWithAppointmentsTomorrow(1,'CONSULT_EVENT');
-            await HEVRepository.createTriggerHEVConsults("tarde",11,10,customersConsult)
+            if(customersConsult.length > 0 )
+                await HEVRepository.createTriggerHEVConsults("tarde",11,10,customersConsult)
         } catch (error) {
             console.log(error)            
         }

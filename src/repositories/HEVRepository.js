@@ -82,9 +82,7 @@ module.exports = {
             "botId": 571,
             "phoneTrigger": '551150804100'
         };
-        
-        console.log(data);
-        
+               
         try {
             const resp = await axios.post('https://webhooks.inbot.com.br/inbot-adm-back/v1/gateway/whatsapp/trigger', data);
             if(customers.length > 0){
@@ -133,8 +131,6 @@ module.exports = {
             "botId": 571,
             "phoneTrigger": '551150804100'
         };
-        
-        console.log(data);
         
         try {
             const resp = await axios.post('https://webhooks.inbot.com.br/inbot-adm-back/v1/gateway/whatsapp/trigger', data);
