@@ -38,7 +38,7 @@ const fetchAllPages = async () => {
   console.log(mergedResponses)
   for (let i = 0; i < mergedResponses.length; i++) {
     const arrValues = await fetchPage(mergedResponses[i])
-    if(arrValues!==undefined && arrValues?.cpf_cnpj!=="" && arrValues?.fone!==""){
+    if(arrValues!==undefined && arrValues?.fone!==""){
       arr.push(arrValues)
       console.log(new Date(), `Customer: ${JSON.stringify(arrValues)}`)
     }

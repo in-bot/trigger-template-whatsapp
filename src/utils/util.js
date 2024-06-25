@@ -34,10 +34,17 @@ const sumQtyDay = (qtyDay) => {
     return date.toISOString().split('T')[0];
 }
 
+const businessWeek = () => {
+    const data = new Date();
+    const weekend = [0,6]
+    return !weekend.includes(data.getDay())
+}
+
 module.exports = {
     timeToMinutes,
     convertTo24Hour,
     timeString,
     sleep,
-    sumQtyDay
+    sumQtyDay,
+    businessWeek
 }
