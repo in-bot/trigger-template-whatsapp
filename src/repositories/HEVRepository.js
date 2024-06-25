@@ -135,31 +135,34 @@ module.exports = {
         try {
             const resp = await axios.post('https://webhooks.inbot.com.br/inbot-adm-back/v1/gateway/whatsapp/trigger', data);
             console.log(customers)
-            // customers.forEach(async(element) => {
-            for (const element of customers) {
-                await util.sleep(5);
-                console.log("==============+++++++++++++++++++++++++++++")
-                console.log(element)
-                const correctTime = findCustomField(element.customFields, '8faabc197fea7cf8e7b04e5d8fb8c0b0')
-                    if((periodo==="manha" && util.timeToMinutes(correctTime) < util.timeToMinutes("13:01")) || (periodo==="tarde" && util.timeToMinutes(correctTime) > util.timeToMinutes("13:00"))){
-                        const params = {
-                            campaignId: `${resp.data.data.insertId}`,
-                            phone: `${element.phone}`,
-                            status: "aguardando",
-                            payload_1: "CONFIRM_AGENDA_CONSULTA "+findCustomField(element.customFields,"5c9d34e4d0942376b2a52a551678ffed"),
-                            payload_2: "CONFIRM_AGENDA_CONSULTA_NOSHOW "+findCustomField(element.customFields,"5c9d34e4d0942376b2a52a551678ffed"),
-                            variable_1: element.name,
-                            variable_2: findCustomField(element.customFields, 'd812476cf9628a594c72353babd6a24d'),
-                            variable_3: findCustomField(element.customFields, 'c03f10ddbf4132cd539d728ca3c9334c'),
-                            variable_4: findCustomField(element.customFields, '164ea54dbf04bacaeb327f5368c49873'),
-                            variable_5: findCustomField(element.customFields, '8faabc197fea7cf8e7b04e5d8fb8c0b0')
-                        };
+            if(customers.length > 0){
+                // customers.forEach(async(element) => {
+                for (const element of customers) {
+                    await util.sleep(5);
+                    console.log("==============+++++++++++++++++++++++++++++")
+                    console.log(element)
+                    const correctTime = findCustomField(element.customFields, '8faabc197fea7cf8e7b04e5d8fb8c0b0')
+                        if((periodo==="manha" && util.timeToMinutes(correctTime) < util.timeToMinutes("13:01")) || (periodo==="tarde" && util.timeToMinutes(correctTime) > util.timeToMinutes("13:00"))){
+                            await this.createCustomerOnTable(element);
+                            const params = {
+                                campaignId: `${resp.data.data.insertId}`,
+                                phone: `${element.phone}`,
+                                status: "aguardando",
+                                payload_1: "CONFIRM_AGENDA_CONSULTA "+findCustomField(element.customFields,"5c9d34e4d0942376b2a52a551678ffed"),
+                                payload_2: "CONFIRM_AGENDA_CONSULTA_NOSHOW "+findCustomField(element.customFields,"5c9d34e4d0942376b2a52a551678ffed"),
+                                variable_1: element.name,
+                                variable_2: findCustomField(element.customFields, 'd812476cf9628a594c72353babd6a24d'),
+                                variable_3: findCustomField(element.customFields, 'c03f10ddbf4132cd539d728ca3c9334c'),
+                                variable_4: findCustomField(element.customFields, '164ea54dbf04bacaeb327f5368c49873'),
+                                variable_5: findCustomField(element.customFields, '8faabc197fea7cf8e7b04e5d8fb8c0b0')
+                            };
 
-                    await axios.post('https://webhooks.inbot.com.br/inbot-adm-back/v1/gateway/whats-customer', params);
-                    console.log("Solicitação enviada com sucesso!");
+                        await axios.post('https://webhooks.inbot.com.br/inbot-adm-back/v1/gateway/whats-customer', params);
+                        console.log("Solicitação enviada com sucesso!");
+                    }
                 }
+                // })
             }
-            // })
         } catch (error) {
             console.error("Erro ao enviar solicitação:", error);
         }
