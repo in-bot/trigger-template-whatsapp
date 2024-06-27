@@ -28,6 +28,10 @@ const sleep = async (seconds) => {
     await new Promise(resolve => setTimeout(() => resolve(), ms));
 };
 
+const delay = (ms) => {
+    return new Promise((resolve) => setTimeout(resolve, ms));
+  }
+
 const sumQtyDay = (qtyDay) => {
     const date = new Date();
     date.setDate(date.getDate() + qtyDay);
@@ -46,5 +50,6 @@ module.exports = {
     timeString,
     sleep,
     sumQtyDay,
-    businessWeek
+    businessWeek,
+    delay
 }
