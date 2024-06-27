@@ -1,4 +1,6 @@
 const axios = require("axios");
+const util = require("../utils/util")
+
 const fetchAllPagesCustomer = require("./OrganicosDeFatimaRepository2");
 
 const fetchPage = async (input) => {
@@ -35,6 +37,7 @@ const fetchPage = async (input) => {
       .replace("-", "");
     input.cpf_cnpj = body.cpf_cnpj;
     console.log(new Date(), requestOptions.data.pesquisa, `Customer: ${input}`);
+
     return input;
   } catch (err) {
     console.log(err);

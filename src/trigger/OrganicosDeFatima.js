@@ -1,7 +1,7 @@
 const util = require("../utils/util")
 const axios = require("axios");
 const organicos = require("../repositories/OrganicosDeFatimaRepository")
-const mock = require("../mock/organicos.json")
+// const mock = require("../mock/organicos.json")
 
 const createCustomerOnTable = (client) => {
     const headers = {
@@ -14,7 +14,7 @@ const createCustomerOnTable = (client) => {
 };
 
 async function triggerRulesOrganicosDeFatima() {
-    const comparisonTime = "07:40"; //HORARIO CORRETO
+    const comparisonTime = "08:42"; //HORARIO CORRETO
     const timeString = util.timeString();
     const timeIn24HourFormat = util.convertTo24Hour(timeString);
     if ((util.timeToMinutes(timeIn24HourFormat) === util.timeToMinutes(comparisonTime)) && util.businessWeek()) {

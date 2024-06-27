@@ -3,7 +3,7 @@ require("dotenv").config({ path: ".env" });
 const TemplateTriggerRepository = require("./repositories/TemplateTriggerRepository");
 const SendTrigger = require("./services/SendTrigger");
 const triggerRulesHEV = require("./trigger/HEV");
-// const triggerRulesOrganicosDeFatima = require("./trigger/OrganicosDeFatima");
+const triggerRulesOrganicosDeFatima = require("./trigger/OrganicosDeFatima");
 // const triggerRulesAramisTestes = require("./trigger/AramisTeste");
 
 async function xptoRoutine() {
@@ -18,8 +18,8 @@ async function xptoRoutine() {
             await sendTrigger.send(customers, awaitTrigger[i]);
         }
     }   
-    triggerRulesHEV();
-    // triggerRulesOrganicosDeFatima();
+    // triggerRulesHEV();
+    triggerRulesOrganicosDeFatima();
     // triggerRulesAramisTestes();
 
 }
