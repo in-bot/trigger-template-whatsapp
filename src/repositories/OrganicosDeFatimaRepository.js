@@ -20,7 +20,7 @@ const fetchPage = async (input) => {
     },
   };
   requestOptions.data.pesquisa = input?.nome;
-  try {
+   try {
     const resp = await axios(requestOptions);
     if (resp.data.retorno.status === "Erro") {
       return console.log(resp.data.retorno.erros);
@@ -36,7 +36,8 @@ const fetchPage = async (input) => {
       .replace(" ", "")
       .replace("-", "");
     input.cpf_cnpj = body.cpf_cnpj;
-    console.log(new Date(), `Customer: ${input}`);
+    console.log(new Date(), requestOptions.data.pesquisa, `Customer: ${input}`);
+
     return input;
   } catch (err) {
     console.log(err);
@@ -45,12 +46,15 @@ const fetchPage = async (input) => {
 
 const fetchAllPages = async () => {
   let arr = [];
+  console.log("Waiting 1 minute...");
+  await delay(60000);
   const mergedResponses = await fetchAllPagesCustomer();
   console.log(mergedResponses);
-  await util.delay(60000);
+  console.log("Waiting 1 minute...");
+  await delay(60000);
   for (let i = 0; i < mergedResponses.length; i++) {
-    if ((i + 1) % 60 === 0) {
-      await util.delay(60000);
+    if ((i + 1) % 50 === 0) {
+      await delay(60000);
     }
 
     const arrValues = await fetchPage(mergedResponses[i]);
