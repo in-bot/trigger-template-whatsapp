@@ -35,8 +35,8 @@ const fetchPage = async (page) => {
   const mm = String(today.getMonth() + 1).padStart(2, "0");
   const dd = String(today.getDate()).padStart(2, "0");
 
-  const formattedToday = `${dd}/${mm}/${yyyy}`;
-  const formattedYearAgo = `${dd}/${mm}/${yyyy-1}`;
+  const formattedToday = `${dd-1}/${mm}/${yyyy}`;
+  const formattedYearAgo = `${dd-1}/${mm}/${yyyy-1}`;
   let responses = [];
   const requestOptions = {
     method: "post",
