@@ -46,6 +46,7 @@ const fetchPage = async (input) => {
 
 const fetchAllPages = async () => {
   let arr = [];
+
   console.log("Waiting 1 minute...");
   await delay(60000);
   const mergedResponses = await fetchAllPagesCustomer();
@@ -62,7 +63,17 @@ const fetchAllPages = async () => {
       arr.push(arrValues);
     }
   }
-  return arr;
+  const uniqueValues = [];
+  const seen = new Set();
+
+  arr.forEach((item) => {
+    if (!seen.has(item.fone)) {
+      uniqueValues.push(item);
+      seen.add(item.fone);
+    }
+  });
+
+  return uniqueValues;
 };
 
 module.exports = {
