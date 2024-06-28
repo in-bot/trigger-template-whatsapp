@@ -3,6 +3,40 @@ const util = require("../utils/util")
 
 const fetchAllPagesCustomer = require("./OrganicosDeFatimaRepository2");
 
+function delay(ms) {
+  return new Promise((resolve) => setTimeout(resolve, ms));
+}
+
+function processDuplicates(data) {
+  let foneCounts = {};
+
+  data.forEach((item) => {
+    if (item.fone in foneCounts) {
+      foneCounts[item.fone]++;
+    } else {
+      foneCounts[item.fone] = 1;
+    }
+  });
+
+  data.forEach((item) => {
+    if (foneCounts[item.fone] > 1) {
+      item.cpf_cnpj = "111 111";
+    }
+  });
+
+  const uniqueValues = [];
+  const seen = new Set();
+
+  data.forEach((item) => {
+    if (!seen.has(item.fone)) {
+      uniqueValues.push(item);
+      seen.add(item.fone);
+    }
+  });
+
+  return uniqueValues;
+}
+
 const fetchPage = async (input) => {
   const auth_token = "375bbc5a520794ee5690bf65296157547d39e9df";
   const base_url = "https://api.tiny.com.br/api2";
@@ -20,7 +54,7 @@ const fetchPage = async (input) => {
     },
   };
   requestOptions.data.pesquisa = input?.nome;
-   try {
+  try {
     const resp = await axios(requestOptions);
     if (resp.data.retorno.status === "Erro") {
       return console.log(resp.data.retorno.erros);
@@ -37,7 +71,6 @@ const fetchPage = async (input) => {
       .replace("-", "");
     input.cpf_cnpj = body.cpf_cnpj;
     console.log(new Date(), requestOptions.data.pesquisa, `Customer: ${input}`);
-
     return input;
   } catch (err) {
     console.log(err);
@@ -46,6 +79,7 @@ const fetchPage = async (input) => {
 
 const fetchAllPages = async () => {
   let arr = [];
+
   console.log("Waiting 1 minute...");
   await util.delay(60000);
   const mergedResponses = await fetchAllPagesCustomer();
@@ -62,7 +96,8 @@ const fetchAllPages = async () => {
       arr.push(arrValues);
     }
   }
-  return arr;
+  const output = processDuplicates(arr);
+  return output;
 };
 
 module.exports = {
