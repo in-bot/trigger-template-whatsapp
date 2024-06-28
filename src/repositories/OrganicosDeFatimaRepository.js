@@ -47,14 +47,14 @@ const fetchPage = async (input) => {
 const fetchAllPages = async () => {
   let arr = [];
   console.log("Waiting 1 minute...");
-  await delay(60000);
+  await util.delay(60000);
   const mergedResponses = await fetchAllPagesCustomer();
   console.log(mergedResponses);
   console.log("Waiting 1 minute...");
-  await delay(60000);
+  await util.delay(60000);
   for (let i = 0; i < mergedResponses.length; i++) {
     if ((i + 1) % 50 === 0) {
-      await delay(60000);
+      await util.delay(60000);
     }
 
     const arrValues = await fetchPage(mergedResponses[i]);
