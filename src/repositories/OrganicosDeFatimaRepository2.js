@@ -1,5 +1,12 @@
 const axios = require("axios");
 
+function formatDate(date) {
+  let day = String(date.getDate()).padStart(2, "0");
+  let month = String(date.getMonth() + 1).padStart(2, "0"); 
+  let year = date.getFullYear();
+  return `${day}/${month}/${year}`;
+}
+
 function mergeDuplicateNames(arr) {
   const mergedMap = new Map();
   arr.forEach((item) => {
@@ -30,17 +37,16 @@ const fetchPage = async (page) => {
   const auth_token = "375bbc5a520794ee5690bf65296157547d39e9df";
   const base_url = "https://api.tiny.com.br/api2";
   
-  const today = new Date();
-  const yyyy = today.getFullYear();
-  const mm = String(today.getMonth() + 1).padStart(2, "0");
-  let dd = String(today.getDate()).padStart(2, "0");
-  
-  if (parseInt(dd) - 1 === 0) {
-    dd = 32;
-  }
-  
-  const formattedToday = `${dd-1}/${mm}/${yyyy}`;
-  const formattedYearAgo = `${dd-1}/${mm}/${yyyy-1}`;
+  let today = new Date();
+
+  let yesterday = new Date(today);
+  yesterday.setDate(today.getDate() - 1);
+
+  let lastYear = new Date(yesterday);
+  lastYear.setFullYear(yesterday.getFullYear() - 1);
+
+  const formattedToday = formatDate(yesterday);
+  const formattedYearAgo = formatDate(lastYear);
   console.log(formattedToday)
   console.log(formattedYearAgo)
   let responses = [];
