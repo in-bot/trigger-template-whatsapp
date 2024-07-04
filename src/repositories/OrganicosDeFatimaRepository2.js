@@ -33,10 +33,16 @@ const fetchPage = async (page) => {
   const today = new Date();
   const yyyy = today.getFullYear();
   const mm = String(today.getMonth() + 1).padStart(2, "0");
-  const dd = String(today.getDate()).padStart(2, "0");
-
+  let dd = String(today.getDate()).padStart(2, "0");
+  
+  if (parseInt(dd) - 1 === 0) {
+    dd = 32;
+  }
+  
   const formattedToday = `${dd-1}/${mm}/${yyyy}`;
   const formattedYearAgo = `${dd-1}/${mm}/${yyyy-1}`;
+  console.log(formattedToday)
+  console.log(formattedYearAgo)
   let responses = [];
   const requestOptions = {
     method: "post",
@@ -58,7 +64,8 @@ const fetchPage = async (page) => {
     const resp = await axios(requestOptions);
     // console.log(resp.data.retorno)
     let totalPagina = resp.data.retorno.numero_paginas;
-    for (let i = 0; i < resp.data.retorno.contas.length; i++) {
+    console.log(new Date(), `Numero de paginas: ${totalPagina}`)
+    for (let i = 0; i < resp.data.retorno?.contas.length; i++) {
       const conta = resp.data.retorno.contas[i].conta;
         responses.push({
           nome: conta.nome_cliente,

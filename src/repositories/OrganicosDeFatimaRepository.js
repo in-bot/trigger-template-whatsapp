@@ -3,10 +3,6 @@ const util = require("../utils/util")
 
 const fetchAllPagesCustomer = require("./OrganicosDeFatimaRepository2");
 
-function delay(ms) {
-  return new Promise((resolve) => setTimeout(resolve, ms));
-}
-
 function processDuplicates(data) {
   let foneCounts = {};
 
@@ -103,9 +99,3 @@ const fetchAllPages = async () => {
 module.exports = {
   fetchAllPages
 }
-
-// (async () => {
-//   const values = await fetchAllPages();
-//   console.log(values);
-//   console.log(values.length);
-// })();

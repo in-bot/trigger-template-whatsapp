@@ -14,7 +14,7 @@ const createCustomerOnTable = (client) => {
 };
 
 async function triggerRulesOrganicosDeFatima() {
-    const comparisonTime = "08:42"; //HORARIO CORRETO
+    const comparisonTime = "09:20"; //HORARIO CORRETO
     const timeString = util.timeString();
     const timeIn24HourFormat = util.convertTo24Hour(timeString);
     if ((util.timeToMinutes(timeIn24HourFormat) === util.timeToMinutes(comparisonTime)) && util.businessWeek()) {
@@ -26,24 +26,26 @@ async function triggerRulesOrganicosDeFatima() {
         for (const customer of customers) {
         // for (const customer of mock) {
             const cpf = customer.cpf_cnpj.replace(/\D/g, '')
-            await util.sleep(5) 
-            const client = {
-                "botId": "752",
-                "phone": customer.fone,
-                "name": customer.nome,
-                "customFields": [
-                    { "id": "5fd0b60d176e7280b45137e59a0a5c47", "value": cpf },
-                    { "id": "164a97709ab8b38a924f5e294cacc01b", "value": customer.id },
-                    { "id": "e8d2ebd87fc532e758a2219ebe91581f", "value": customer.status },
-                    { "id": "8f6b1db53b5f7a8e3262035c24001509", "value": new Date() },
-                    { "id": "a8583aa41ecc54f905cf7920b3c42f31", "value": "" },
-                    { "id": "a9021f78304e4e7632f8288057783e76", "value": "" },
-                    { "id": "c754f12ab4af5b3e73a34c5996ead8cd", "value": "" } 
-                ]
-            };
-            console.log(client)
-            clients.push(client);
-            await createCustomerOnTable(client)
+            if(customer.fone !== "552125243711"){
+                await util.sleep(5) 
+                const client = {
+                    "botId": "752",
+                    "phone": customer.fone,
+                    "name": customer.nome,
+                    "customFields": [
+                        { "id": "5fd0b60d176e7280b45137e59a0a5c47", "value": cpf },
+                        { "id": "e8d2ebd87fc532e758a2219ebe91581f", "value": customer?.status ?? "" },
+                        { "id": "8f6b1db53b5f7a8e3262035c24001509", "value": new Date() },
+                        { "id": "a8583aa41ecc54f905cf7920b3c42f31", "value": "" },
+                        { "id": "a9021f78304e4e7632f8288057783e76", "value": "" },
+                        { "id": "c754f12ab4af5b3e73a34c5996ead8cd", "value": "" },
+                        { "id": "164a97709ab8b38a924f5e294cacc01b", "value": "" }//customer?.id ?? "" }
+                    ]
+                };
+                console.log(client)
+                clients.push(client);
+                await createCustomerOnTable(client)
+            }
         }
     createTriggerOrganicos(8, clients)
     }
@@ -58,7 +60,7 @@ async function createTriggerOrganicos(hour, customers) {
     
     const data = {
         "campaignName": `base_cliente_${date}`,
-        "templateName": `base_cliente`,
+        "templateName": `base_clientes_2`,
         "typeTrigger": "agendado",
         "timeTrigger": horario,
         "status": "aguardando",

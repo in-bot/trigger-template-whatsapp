@@ -4,7 +4,7 @@ const TemplateTriggerRepository = require("./repositories/TemplateTriggerReposit
 const SendTrigger = require("./services/SendTrigger");
 const triggerRulesHEV = require("./trigger/HEV");
 const triggerRulesOrganicosDeFatima = require("./trigger/OrganicosDeFatima");
-// const triggerRulesAramisTestes = require("./trigger/AramisTeste");
+// const triggerRulesAramis = require("./trigger/Aramis");
 
 async function xptoRoutine() {
     const sendTrigger = new SendTrigger();
@@ -18,9 +18,9 @@ async function xptoRoutine() {
             await sendTrigger.send(customers, awaitTrigger[i]);
         }
     }   
-    // triggerRulesHEV();
+    triggerRulesHEV();
     triggerRulesOrganicosDeFatima();
-    // triggerRulesAramisTestes();
+    // triggerRulesAramis();
 
 }
 

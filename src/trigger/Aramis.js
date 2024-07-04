@@ -11,7 +11,7 @@ async function triggerRulesAramisTestes() {
     let comparisonTime = "16:45"; //HORARIO CORRETO
     if (util.timeToMinutes(timeIn24HourFormat) === util.timeToMinutes(comparisonTime)) {
         comparisonTime = "08:00"; //HORARIO CORRETO
-            // createTriggerAramis(13,50, "customers", "01", "ONB_1_OPTOUT", 0);
+            // createTriggerAramis(5,0, "customers", "01", "ONB_1_OPTOUT", 0);
             // createTriggerAramis(5,0, "customers", "02", "ONB_2_MENS_CEO", 1);
             // createTriggerAramis(5,0, "customers", "03", "ONB_3_EXP_LOJA", 2);
             // createTriggerAramis(5,0, "customers", "04", "ONB_4_PONTO", 3);
