@@ -40,7 +40,13 @@ const sumQtyDay = (qtyDay) => {
 
 const businessWeek = () => {
     const data = new Date();
-    const weekend = [0,6]
+    const weekend = [0,6] // 0 - domingo e 6 - sabado
+    return !weekend.includes(data.getDay())
+}
+
+const daysOfWeek = () => {
+    const data = new Date();
+    const weekend = [1]
     return !weekend.includes(data.getDay())
 }
 
@@ -48,6 +54,7 @@ module.exports = {
     timeToMinutes,
     convertTo24Hour,
     timeString,
+    daysOfWeek,
     sleep,
     sumQtyDay,
     businessWeek,

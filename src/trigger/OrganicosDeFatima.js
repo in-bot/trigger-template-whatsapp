@@ -14,10 +14,10 @@ const createCustomerOnTable = (client) => {
 };
 
 async function triggerRulesOrganicosDeFatima() {
-    const comparisonTime = "09:20"; //HORARIO CORRETO
+    const comparisonTime = "10:34"; //HORARIO CORRETO
     const timeString = util.timeString();
     const timeIn24HourFormat = util.convertTo24Hour(timeString);
-    if ((util.timeToMinutes(timeIn24HourFormat) === util.timeToMinutes(comparisonTime)) && util.businessWeek()) {
+    if ((util.timeToMinutes(timeIn24HourFormat) === util.timeToMinutes(comparisonTime)) && util.businessWeek() && util.daysOfWeek()) {
 
         const clients = [];
         const customers = await organicos.fetchAllPages();
