@@ -14,7 +14,7 @@ const createCustomerOnTable = (client) => {
 };
 
 async function triggerRulesOrganicosDeFatima() {
-    const comparisonTime = "10:34"; //HORARIO CORRETO
+    const comparisonTime = "10:32"; //HORARIO CORRETO
     const timeString = util.timeString();
     const timeIn24HourFormat = util.convertTo24Hour(timeString);
     if ((util.timeToMinutes(timeIn24HourFormat) === util.timeToMinutes(comparisonTime)) && util.businessWeek() && util.daysOfWeek()) {
@@ -60,7 +60,7 @@ async function createTriggerOrganicos(hour, customers) {
     
     const data = {
         "campaignName": `base_cliente_${date}`,
-        "templateName": `base_clientes_2`,
+        "templateName": `base_cliente_3`,
         "typeTrigger": "agendado",
         "timeTrigger": horario,
         "status": "aguardando",

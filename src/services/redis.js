@@ -1,5 +1,6 @@
 const { createClient } = require("redis");
-const url_redis = "redis://inbot-vpc.ph02sx.0001.use1.cache.amazonaws.com:6379";
+const url_redis = "redis://valkey:6379";
+// const url_redis = "redis://inbot-vpc.ph02sx.0001.use1.cache.amazonaws.com:6379";
 
 async function enqueueAndPublish(queueName, item) {
     const client = await createClient({ url: url_redis })

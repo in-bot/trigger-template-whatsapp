@@ -1,15 +1,16 @@
 {
     "data": [
         {
-            "id": "30d0177d5f46805bc39af384571164a3",
-            "botId": 744,
-            "phone": "5567982136274",
-            "name": "EVERTON FERREIRA DA CUNHA",
-            "email": "epereir021@gmail.com",
+            "id": "c5b33992f473a9476537b96d60973121",
+            "name": "ELIZA ELVIRA PEREIRA",
+            "phone": "5531993174229",
+            "email": "elizapereirape1704@gmail.com",
+            "updatedAt": "2024-07-12T21:24:23.000Z",
+            "createdAt": "2024-07-12T21:24:23.000Z",
             "customFields": [
                 {
                     "id": "3393acec2c25dc21cd0be1a9a96eefd5",
-                    "value": "08/07/2024"
+                    "value": "16/07/2024"
                 },
                 {
                     "id": "5e1397fd3b44b6f71b62ba9942aa8c8e",
@@ -37,20 +38,21 @@
                 },
                 {
                     "id": "03cf509f48333998426370885a5bce2c",
-                    "value": "6671"
+                    "value": "6679"
                 }
             ]
         },
         {
-            "id": "7a6ac96539c2108cabb2c7057ce839d2",
-            "botId": 744,
-            "phone": "5571996163825",
-            "name": "ROBERT FERREIRA DE JESUS",
-            "email": "roohferreira53@gmail.com",
+            "id": "3e9aa2638764800bcd6669e6dd381fa0",
+            "name": "VINICIUS BARBOSA DA LUZ",
+            "phone": "5511930970025",
+            "email": "viniciusdaluz0@gmail.com",
+            "updatedAt": "2024-07-12T21:25:33.000Z",
+            "createdAt": "2024-07-12T21:25:33.000Z",
             "customFields": [
                 {
                     "id": "3393acec2c25dc21cd0be1a9a96eefd5",
-                    "value": "08/07/2024"
+                    "value": "16/07/2024"
                 },
                 {
                     "id": "5e1397fd3b44b6f71b62ba9942aa8c8e",
@@ -78,184 +80,21 @@
                 },
                 {
                     "id": "03cf509f48333998426370885a5bce2c",
-                    "value": "6665"
+                    "value": "6684"
                 }
             ]
         },
         {
-            "id": "1ac0c2bf5df18bf544cbc6624aeebfce",
-            "botId": 744,
-            "phone": "5511966482116",
-            "name": "LUAN ANGELO DA SILVA",
-            "email": "angeloluan458@gmail.com",
+            "id": "06ef9951ff79e0d32c5842505c556115",
+            "name": "AMANDA VICTORIA VERAS INACIO",
+            "phone": "5511998329296",
+            "email": "amandaveras28@outlook.com",
+            "updatedAt": "2024-07-12T21:26:39.000Z",
+            "createdAt": "2024-07-12T21:26:39.000Z",
             "customFields": [
                 {
                     "id": "3393acec2c25dc21cd0be1a9a96eefd5",
-                    "value": "08/07/2024"
-                },
-                {
-                    "id": "5e1397fd3b44b6f71b62ba9942aa8c8e",
-                    "value": "ATIVO"
-                },
-                {
-                    "id": "a95afc4f82126d2cae1ba51590744214",
-                    "value": ""
-                },
-                {
-                    "id": "dd8c6a4819b484f22fe54cbe80b3c5fc",
-                    "value": "LOJAS"
-                },
-                {
-                    "id": "dea8f28106184ba46a6fd1bb1f539337",
-                    "value": "0"
-                },
-                {
-                    "id": "e92bbb5ae8ca252cec61cdd56eda8f7e",
-                    "value": ""
-                },
-                {
-                    "id": "cb1b981295801953596756e4289e76bc",
-                    "value": ""
-                },
-                {
-                    "id": "03cf509f48333998426370885a5bce2c",
-                    "value": "6667"
-                }
-            ]
-        },
-        {
-            "id": "af01193cb5cae7a0789d33d290f7c94b",
-            "botId": 744,
-            "phone": "5511974390909",
-            "name": "LETICIA FERNANDA PINHEIRO DA SILVA",
-            "email": "ls8026181@gmail.com",
-            "customFields": [
-                {
-                    "id": "3393acec2c25dc21cd0be1a9a96eefd5",
-                    "value": "08/07/2024"
-                },
-                {
-                    "id": "5e1397fd3b44b6f71b62ba9942aa8c8e",
-                    "value": "ATIVO"
-                },
-                {
-                    "id": "a95afc4f82126d2cae1ba51590744214",
-                    "value": ""
-                },
-                {
-                    "id": "dd8c6a4819b484f22fe54cbe80b3c5fc",
-                    "value": "LOJAS"
-                },
-                {
-                    "id": "dea8f28106184ba46a6fd1bb1f539337",
-                    "value": "0"
-                },
-                {
-                    "id": "e92bbb5ae8ca252cec61cdd56eda8f7e",
-                    "value": ""
-                },
-                {
-                    "id": "cb1b981295801953596756e4289e76bc",
-                    "value": ""
-                },
-                {
-                    "id": "03cf509f48333998426370885a5bce2c",
-                    "value": "6666"
-                }
-            ]
-        },
-        {
-            "id": "75f592d4d04a939850a21017bddca0c8",
-            "botId": 744,
-            "phone": "5562999905837",
-            "name": "RAYANE FAUSTINO FARIA",
-            "email": "Rfaustino124@gmail.com",
-            "customFields": [
-                {
-                    "id": "3393acec2c25dc21cd0be1a9a96eefd5",
-                    "value": "08/07/2024"
-                },
-                {
-                    "id": "5e1397fd3b44b6f71b62ba9942aa8c8e",
-                    "value": "ATIVO"
-                },
-                {
-                    "id": "a95afc4f82126d2cae1ba51590744214",
-                    "value": ""
-                },
-                {
-                    "id": "dd8c6a4819b484f22fe54cbe80b3c5fc",
-                    "value": "LOJAS"
-                },
-                {
-                    "id": "dea8f28106184ba46a6fd1bb1f539337",
-                    "value": "0"
-                },
-                {
-                    "id": "e92bbb5ae8ca252cec61cdd56eda8f7e",
-                    "value": ""
-                },
-                {
-                    "id": "cb1b981295801953596756e4289e76bc",
-                    "value": ""
-                },
-                {
-                    "id": "03cf509f48333998426370885a5bce2c",
-                    "value": "6675"
-                }
-            ]
-        },
-        {
-            "id": "cc68f50d988decb8bdda951668216130",
-            "botId": 744,
-            "phone": "5511973198192",
-            "name": "ANDRESSA MARIA DA ROSA",
-            "email": "andressamanzzini@gmail.com",
-            "customFields": [
-                {
-                    "id": "3393acec2c25dc21cd0be1a9a96eefd5",
-                    "value": "08/07/2024"
-                },
-                {
-                    "id": "5e1397fd3b44b6f71b62ba9942aa8c8e",
-                    "value": "ATIVO"
-                },
-                {
-                    "id": "a95afc4f82126d2cae1ba51590744214",
-                    "value": ""
-                },
-                {
-                    "id": "dd8c6a4819b484f22fe54cbe80b3c5fc",
-                    "value": "LOJAS"
-                },
-                {
-                    "id": "dea8f28106184ba46a6fd1bb1f539337",
-                    "value": "0"
-                },
-                {
-                    "id": "e92bbb5ae8ca252cec61cdd56eda8f7e",
-                    "value": ""
-                },
-                {
-                    "id": "cb1b981295801953596756e4289e76bc",
-                    "value": ""
-                },
-                {
-                    "id": "03cf509f48333998426370885a5bce2c",
-                    "value": "6664"
-                }
-            ]
-        },
-        {
-            "id": "384ed68272bf6e5b6808a22e0659ac15",
-            "botId": 744,
-            "phone": "5511947237805",
-            "name": "BRENNER ALYSON FARIA DE FARIAS",
-            "email": "brenner.ff@gmail.com",
-            "customFields": [
-                {
-                    "id": "3393acec2c25dc21cd0be1a9a96eefd5",
-                    "value": "08/07/2024"
+                    "value": "16/07/2024"
                 },
                 {
                     "id": "5e1397fd3b44b6f71b62ba9942aa8c8e",
@@ -271,7 +110,7 @@
                 },
                 {
                     "id": "dea8f28106184ba46a6fd1bb1f539337",
-                    "value": "1"
+                    "value": "2"
                 },
                 {
                     "id": "e92bbb5ae8ca252cec61cdd56eda8f7e",
@@ -283,20 +122,21 @@
                 },
                 {
                     "id": "03cf509f48333998426370885a5bce2c",
-                    "value": "6662"
+                    "value": "6676"
                 }
             ]
         },
         {
-            "id": "cc0c20ff26f0c08b3800713c36df23d5",
-            "botId": 744,
-            "phone": "5516994478473",
-            "name": "MARCILIO DO ROZARIO DE LIMA JUNIOR",
-            "email": "marciliodorozario@gmail.com",
+            "id": "e4bea3de301cf062df64cb5b34b79427",
+            "name": "JOICE LODO",
+            "phone": "5543988795454",
+            "email": "Joice.lodo78@gmail.com",
+            "updatedAt": "2024-07-12T21:27:48.000Z",
+            "createdAt": "2024-07-12T21:27:48.000Z",
             "customFields": [
                 {
                     "id": "3393acec2c25dc21cd0be1a9a96eefd5",
-                    "value": "08/07/2024"
+                    "value": "16/07/2024"
                 },
                 {
                     "id": "5e1397fd3b44b6f71b62ba9942aa8c8e",
@@ -324,20 +164,21 @@
                 },
                 {
                     "id": "03cf509f48333998426370885a5bce2c",
-                    "value": "6672"
+                    "value": "6677"
                 }
             ]
         },
         {
-            "id": "8d0a23c6d6e6c85aac077a9f41a1e8be",
-            "botId": 744,
-            "phone": "5519978278702",
-            "name": "NATHALIA LOVERDE PEDROSO",
-            "email": "blog.natyloverde@gmail.com",
+            "id": "c4ddc96ff43b8494c39482c8cbf4715b",
+            "name": "ROBERTO DE SOUZA",
+            "phone": "5511994862473",
+            "email": "roberto.souza0511@hotmail.com",
+            "updatedAt": "2024-07-12T21:28:45.000Z",
+            "createdAt": "2024-07-12T21:28:45.000Z",
             "customFields": [
                 {
                     "id": "3393acec2c25dc21cd0be1a9a96eefd5",
-                    "value": "08/07/2024"
+                    "value": "16/07/2024"
                 },
                 {
                     "id": "5e1397fd3b44b6f71b62ba9942aa8c8e",
@@ -365,184 +206,21 @@
                 },
                 {
                     "id": "03cf509f48333998426370885a5bce2c",
-                    "value": "6663"
+                    "value": "6683"
                 }
             ]
         },
         {
-            "id": "48d5d776689d8d29483e8ceb4d3341f6",
-            "botId": 744,
-            "phone": "5527996408364",
-            "name": "LUDMILA DOS SANTOS QUEIROZ",
-            "email": "ludmilaqueiroz1826@gmail.com",
+            "id": "634dc40b3a042bfceeb989fdf2b850d5",
+            "name": "NAIZE CRISTINA CASTRO SILVA",
+            "phone": "5511964605732",
+            "email": "naizecristinacastro@icloud.com",
+            "updatedAt": "2024-07-12T21:29:54.000Z",
+            "createdAt": "2024-07-12T21:29:54.000Z",
             "customFields": [
                 {
                     "id": "3393acec2c25dc21cd0be1a9a96eefd5",
-                    "value": "08/07/2024"
-                },
-                {
-                    "id": "5e1397fd3b44b6f71b62ba9942aa8c8e",
-                    "value": "ATIVO"
-                },
-                {
-                    "id": "a95afc4f82126d2cae1ba51590744214",
-                    "value": ""
-                },
-                {
-                    "id": "dd8c6a4819b484f22fe54cbe80b3c5fc",
-                    "value": "CD"
-                },
-                {
-                    "id": "dea8f28106184ba46a6fd1bb1f539337",
-                    "value": "0"
-                },
-                {
-                    "id": "e92bbb5ae8ca252cec61cdd56eda8f7e",
-                    "value": ""
-                },
-                {
-                    "id": "cb1b981295801953596756e4289e76bc",
-                    "value": ""
-                },
-                {
-                    "id": "03cf509f48333998426370885a5bce2c",
-                    "value": "6670"
-                }
-            ]
-        },
-        {
-            "id": "d74c14f03add210f283dc19d8e6b6e39",
-            "botId": 744,
-            "phone": "5527992014417",
-            "name": "LILIANE PEREIRA DOS SANTOS",
-            "email": "lilianepsan@outlook.com",
-            "customFields": [
-                {
-                    "id": "3393acec2c25dc21cd0be1a9a96eefd5",
-                    "value": "08/07/2024"
-                },
-                {
-                    "id": "5e1397fd3b44b6f71b62ba9942aa8c8e",
-                    "value": "ATIVO"
-                },
-                {
-                    "id": "a95afc4f82126d2cae1ba51590744214",
-                    "value": ""
-                },
-                {
-                    "id": "dd8c6a4819b484f22fe54cbe80b3c5fc",
-                    "value": "CD"
-                },
-                {
-                    "id": "dea8f28106184ba46a6fd1bb1f539337",
-                    "value": "0"
-                },
-                {
-                    "id": "e92bbb5ae8ca252cec61cdd56eda8f7e",
-                    "value": ""
-                },
-                {
-                    "id": "cb1b981295801953596756e4289e76bc",
-                    "value": ""
-                },
-                {
-                    "id": "03cf509f48333998426370885a5bce2c",
-                    "value": "6669"
-                }
-            ]
-        },
-        {
-            "id": "25a4904d9b7d3f0e3908ed5c2cab64da",
-            "botId": 744,
-            "phone": "5527996579366",
-            "name": "JOCIVALDO BARRETO DA SILVA",
-            "email": "jocivaldopedrobia@gmail.com",
-            "customFields": [
-                {
-                    "id": "3393acec2c25dc21cd0be1a9a96eefd5",
-                    "value": "08/07/2024"
-                },
-                {
-                    "id": "5e1397fd3b44b6f71b62ba9942aa8c8e",
-                    "value": "ATIVO"
-                },
-                {
-                    "id": "a95afc4f82126d2cae1ba51590744214",
-                    "value": ""
-                },
-                {
-                    "id": "dd8c6a4819b484f22fe54cbe80b3c5fc",
-                    "value": "CD"
-                },
-                {
-                    "id": "dea8f28106184ba46a6fd1bb1f539337",
-                    "value": "0"
-                },
-                {
-                    "id": "e92bbb5ae8ca252cec61cdd56eda8f7e",
-                    "value": ""
-                },
-                {
-                    "id": "cb1b981295801953596756e4289e76bc",
-                    "value": ""
-                },
-                {
-                    "id": "03cf509f48333998426370885a5bce2c",
-                    "value": "6674"
-                }
-            ]
-        },
-        {
-            "id": "9a6389d3b43eb732222fb692de9b3dbc",
-            "botId": 744,
-            "phone": "5511974390909",
-            "name": "FABIANO DE SOUZA RISSI",
-            "email": "fsrissi5@gmail.com",
-            "customFields": [
-                {
-                    "id": "3393acec2c25dc21cd0be1a9a96eefd5",
-                    "value": "08/07/2024"
-                },
-                {
-                    "id": "5e1397fd3b44b6f71b62ba9942aa8c8e",
-                    "value": "ATIVO"
-                },
-                {
-                    "id": "a95afc4f82126d2cae1ba51590744214",
-                    "value": ""
-                },
-                {
-                    "id": "dd8c6a4819b484f22fe54cbe80b3c5fc",
-                    "value": "CD"
-                },
-                {
-                    "id": "dea8f28106184ba46a6fd1bb1f539337",
-                    "value": "0"
-                },
-                {
-                    "id": "e92bbb5ae8ca252cec61cdd56eda8f7e",
-                    "value": ""
-                },
-                {
-                    "id": "cb1b981295801953596756e4289e76bc",
-                    "value": ""
-                },
-                {
-                    "id": "03cf509f48333998426370885a5bce2c",
-                    "value": "6673"
-                }
-            ]
-        },
-        {
-            "id": "e8f29e0225d6a6c77439645b410d925c",
-            "botId": 744,
-            "phone": "5511958523937",
-            "name": "ALEXIA LORRANY DE SOUZA SILVA",
-            "email": "alexia.lorrany1417@gmail.com",
-            "customFields": [
-                {
-                    "id": "3393acec2c25dc21cd0be1a9a96eefd5",
-                    "value": "08/07/2024"
+                    "value": "16/07/2024"
                 },
                 {
                     "id": "5e1397fd3b44b6f71b62ba9942aa8c8e",
@@ -570,7 +248,133 @@
                 },
                 {
                     "id": "03cf509f48333998426370885a5bce2c",
-                    "value": "6668"
+                    "value": "6678"
+                }
+            ]
+        },
+        {
+            "id": "3f201dd767c75e184c3be2b2967c9727",
+            "name": "AMANDA BONFIM DA SILVA LEMOS",
+            "phone": "5527992540261",
+            "email": "amandalemos0315@gmail.com",
+            "updatedAt": "2024-07-12T21:30:53.000Z",
+            "createdAt": "2024-07-12T21:30:53.000Z",
+            "customFields": [
+                {
+                    "id": "3393acec2c25dc21cd0be1a9a96eefd5",
+                    "value": "16/07/2024"
+                },
+                {
+                    "id": "5e1397fd3b44b6f71b62ba9942aa8c8e",
+                    "value": "ATIVO"
+                },
+                {
+                    "id": "a95afc4f82126d2cae1ba51590744214",
+                    "value": ""
+                },
+                {
+                    "id": "dd8c6a4819b484f22fe54cbe80b3c5fc",
+                    "value": "CD"
+                },
+                {
+                    "id": "dea8f28106184ba46a6fd1bb1f539337",
+                    "value": "0"
+                },
+                {
+                    "id": "e92bbb5ae8ca252cec61cdd56eda8f7e",
+                    "value": ""
+                },
+                {
+                    "id": "cb1b981295801953596756e4289e76bc",
+                    "value": ""
+                },
+                {
+                    "id": "03cf509f48333998426370885a5bce2c",
+                    "value": "6682"
+                }
+            ]
+        },
+        {
+            "id": "d276637aa5577d49cbcbd18e83ee89da",
+            "name": "VALDEMAR GOMES JUNIOR",
+            "phone": "5527999753659",
+            "email": "mazinhogomesjunior@gmail.com",
+            "updatedAt": "2024-07-12T21:31:32.000Z",
+            "createdAt": "2024-07-12T21:31:32.000Z",
+            "customFields": [
+                {
+                    "id": "3393acec2c25dc21cd0be1a9a96eefd5",
+                    "value": "16/07/2024"
+                },
+                {
+                    "id": "5e1397fd3b44b6f71b62ba9942aa8c8e",
+                    "value": "ATIVO"
+                },
+                {
+                    "id": "a95afc4f82126d2cae1ba51590744214",
+                    "value": ""
+                },
+                {
+                    "id": "dd8c6a4819b484f22fe54cbe80b3c5fc",
+                    "value": "CD"
+                },
+                {
+                    "id": "dea8f28106184ba46a6fd1bb1f539337",
+                    "value": "0"
+                },
+                {
+                    "id": "e92bbb5ae8ca252cec61cdd56eda8f7e",
+                    "value": ""
+                },
+                {
+                    "id": "cb1b981295801953596756e4289e76bc",
+                    "value": ""
+                },
+                {
+                    "id": "03cf509f48333998426370885a5bce2c",
+                    "value": "6681"
+                }
+            ]
+        },
+        {
+            "id": "da891cdd841dd8945587378d89c42d9b",
+            "name": "JOAO VITOR DOS REIS DA SILVA",
+            "phone": "5527988111694",
+            "email": "jvito0868@gmail.com",
+            "updatedAt": "2024-07-12T21:32:10.000Z",
+            "createdAt": "2024-07-12T21:32:10.000Z",
+            "customFields": [
+                {
+                    "id": "3393acec2c25dc21cd0be1a9a96eefd5",
+                    "value": "16/07/2024"
+                },
+                {
+                    "id": "5e1397fd3b44b6f71b62ba9942aa8c8e",
+                    "value": "ATIVO"
+                },
+                {
+                    "id": "a95afc4f82126d2cae1ba51590744214",
+                    "value": ""
+                },
+                {
+                    "id": "dd8c6a4819b484f22fe54cbe80b3c5fc",
+                    "value": "CD"
+                },
+                {
+                    "id": "dea8f28106184ba46a6fd1bb1f539337",
+                    "value": "0"
+                },
+                {
+                    "id": "e92bbb5ae8ca252cec61cdd56eda8f7e",
+                    "value": ""
+                },
+                {
+                    "id": "cb1b981295801953596756e4289e76bc",
+                    "value": ""
+                },
+                {
+                    "id": "03cf509f48333998426370885a5bce2c",
+                    "value": "6680"
                 }
             ]
         }
