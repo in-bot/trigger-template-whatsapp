@@ -80,7 +80,8 @@ module.exports = {
             "timeTrigger": horario,
             "status": "aguardando",
             "botId": 571,
-            "phoneTrigger": '551150804100'
+            "phoneTrigger": '551150804100',
+            "tag":"exame"
         };
                
         try {
@@ -129,7 +130,8 @@ module.exports = {
             "timeTrigger": horario,
             "status": "aguardando",
             "botId": 571,
-            "phoneTrigger": '551150804100'
+            "phoneTrigger": '551150804100',
+            "tag":"consulta"
         };
         
         try {
