@@ -1,299 +1,173 @@
 {
   "data": [
-      {
-          "id": "0ae00a5fbfd3bf31f45e3deef2ca9bf5",
-          "name": "KARINA DE MORAES CIPRIANO",
-          "phone": "5511969245631",
-          "email": "karinamoraescipriano@gmail.com",
-          "updatedAt": "2024-07-20T13:50:05.000Z",
-          "createdAt": "2024-07-20T13:50:05.000Z",
-          "customFields": [
-              {
-                  "id": "3393acec2c25dc21cd0be1a9a96eefd5",
-                  "value": "23/07/2024"
-              },
-              {
-                  "id": "5e1397fd3b44b6f71b62ba9942aa8c8e",
-                  "value": "ATIVO"
-              },
-              {
-                  "id": "a95afc4f82126d2cae1ba51590744214",
-                  "value": ""
-              },
-              {
-                  "id": "dd8c6a4819b484f22fe54cbe80b3c5fc",
-                  "value": "MATRIZ"
-              },
-              {
-                  "id": "dea8f28106184ba46a6fd1bb1f539337",
-                  "value": "2"
-              },
-              {
-                  "id": "e92bbb5ae8ca252cec61cdd56eda8f7e",
-                  "value": ""
-              },
-              {
-                  "id": "cb1b981295801953596756e4289e76bc",
-                  "value": ""
-              },
-              {
-                  "id": "03cf509f48333998426370885a5bce2c",
-                  "value": "6685"
-              }
-          ]
-      },
-      {
-          "id": "928df4eba17977bc3bef9ac178945232",
-          "name": "LYANDRA DE ARAUJO MUNIZ",
-          "phone": "5511965838056",
-          "email": "Lyandra_muniz@hotmail.com",
-          "updatedAt": "2024-07-20T13:53:38.000Z",
-          "createdAt": "2024-07-20T13:53:38.000Z",
-          "customFields": [
-              {
-                  "id": "3393acec2c25dc21cd0be1a9a96eefd5",
-                  "value": "23/07/2024"
-              },
-              {
-                  "id": "5e1397fd3b44b6f71b62ba9942aa8c8e",
-                  "value": "ATIVO"
-              },
-              {
-                  "id": "a95afc4f82126d2cae1ba51590744214",
-                  "value": ""
-              },
-              {
-                  "id": "dd8c6a4819b484f22fe54cbe80b3c5fc",
-                  "value": "MATRIZ"
-              },
-              {
-                  "id": "dea8f28106184ba46a6fd1bb1f539337",
-                  "value": "2"
-              },
-              {
-                  "id": "e92bbb5ae8ca252cec61cdd56eda8f7e",
-                  "value": ""
-              },
-              {
-                  "id": "cb1b981295801953596756e4289e76bc",
-                  "value": ""
-              },
-              {
-                  "id": "03cf509f48333998426370885a5bce2c",
-                  "value": "6686"
-              }
-          ]
-      },
-      {
-          "id": "aa785fc862bba5899fdbfa4972187d6c",
-          "name": "MARIA EUNICE DAS CHAGAS LESSA",
-          "phone": "5561992152793",
-          "email": "Lessa.mariaeunice@gmail.com",
-          "updatedAt": "2024-07-20T13:54:04.000Z",
-          "createdAt": "2024-07-20T13:54:04.000Z",
-          "customFields": [
-              {
-                  "id": "3393acec2c25dc21cd0be1a9a96eefd5",
-                  "value": "23/07/2024"
-              },
-              {
-                  "id": "5e1397fd3b44b6f71b62ba9942aa8c8e",
-                  "value": "ATIVO"
-              },
-              {
-                  "id": "a95afc4f82126d2cae1ba51590744214",
-                  "value": ""
-              },
-              {
-                  "id": "dd8c6a4819b484f22fe54cbe80b3c5fc",
-                  "value": "LOJAS"
-              },
-              {
-                  "id": "dea8f28106184ba46a6fd1bb1f539337",
-                  "value": ""
-              },
-              {
-                  "id": "e92bbb5ae8ca252cec61cdd56eda8f7e",
-                  "value": ""
-              },
-              {
-                  "id": "cb1b981295801953596756e4289e76bc",
-                  "value": ""
-              },
-              {
-                  "id": "03cf509f48333998426370885a5bce2c",
-                  "value": "6687"
-              }
-          ]
-      },
-      {
-          "id": "f5236f0e9e302912ba4ecca9e1391726",
-          "name": "JOAQUIM DE OLIVEIRA DOS REIS",
-          "phone": "5527999039587",
-          "email": "reisjoaquim968@gmail.com",
-          "updatedAt": "2024-07-20T13:54:31.000Z",
-          "createdAt": "2024-07-20T13:54:31.000Z",
-          "customFields": [
-              {
-                  "id": "3393acec2c25dc21cd0be1a9a96eefd5",
-                  "value": "23/07/2024"
-              },
-              {
-                  "id": "5e1397fd3b44b6f71b62ba9942aa8c8e",
-                  "value": "ATIVO"
-              },
-              {
-                  "id": "a95afc4f82126d2cae1ba51590744214",
-                  "value": ""
-              },
-              {
-                  "id": "dd8c6a4819b484f22fe54cbe80b3c5fc",
-                  "value": "CD"
-              },
-              {
-                  "id": "dea8f28106184ba46a6fd1bb1f539337",
-                  "value": ""
-              },
-              {
-                  "id": "e92bbb5ae8ca252cec61cdd56eda8f7e",
-                  "value": ""
-              },
-              {
-                  "id": "cb1b981295801953596756e4289e76bc",
-                  "value": ""
-              },
-              {
-                  "id": "03cf509f48333998426370885a5bce2c",
-                  "value": "6688"
-              }
-          ]
-      },
-      {
-          "id": "bc6199dfeabee3f971819fa892c26b13",
-          "name": "MARCOS JESUS SANTOS",
-          "phone": "5527995781271",
-          "email": "c645528@gmail.com",
-          "updatedAt": "2024-07-20T13:55:24.000Z",
-          "createdAt": "2024-07-20T13:55:24.000Z",
-          "customFields": [
-              {
-                  "id": "3393acec2c25dc21cd0be1a9a96eefd5",
-                  "value": "23/07/2024"
-              },
-              {
-                  "id": "5e1397fd3b44b6f71b62ba9942aa8c8e",
-                  "value": "ATIVO"
-              },
-              {
-                  "id": "a95afc4f82126d2cae1ba51590744214",
-                  "value": ""
-              },
-              {
-                  "id": "dd8c6a4819b484f22fe54cbe80b3c5fc",
-                  "value": "CD"
-              },
-              {
-                  "id": "dea8f28106184ba46a6fd1bb1f539337",
-                  "value": ""
-              },
-              {
-                  "id": "e92bbb5ae8ca252cec61cdd56eda8f7e",
-                  "value": ""
-              },
-              {
-                  "id": "cb1b981295801953596756e4289e76bc",
-                  "value": ""
-              },
-              {
-                  "id": "03cf509f48333998426370885a5bce2c",
-                  "value": "6689"
-              }
-          ]
-      },
-      {
-          "id": "4092fec88e84cc88d62cfba7494af72f",
-          "name": "HUGO LUIZ TEIXEIRA",
-          "phone": "5521983966283",
-          "email": "soyxn1483@gmail.com",
-          "updatedAt": "2024-07-20T13:55:51.000Z",
-          "createdAt": "2024-07-20T13:55:51.000Z",
-          "customFields": [
-              {
-                  "id": "3393acec2c25dc21cd0be1a9a96eefd5",
-                  "value": "23/07/2024"
-              },
-              {
-                  "id": "5e1397fd3b44b6f71b62ba9942aa8c8e",
-                  "value": "ATIVO"
-              },
-              {
-                  "id": "a95afc4f82126d2cae1ba51590744214",
-                  "value": ""
-              },
-              {
-                  "id": "dd8c6a4819b484f22fe54cbe80b3c5fc",
-                  "value": "LOJAS"
-              },
-              {
-                  "id": "dea8f28106184ba46a6fd1bb1f539337",
-                  "value": ""
-              },
-              {
-                  "id": "e92bbb5ae8ca252cec61cdd56eda8f7e",
-                  "value": ""
-              },
-              {
-                  "id": "cb1b981295801953596756e4289e76bc",
-                  "value": ""
-              },
-              {
-                  "id": "03cf509f48333998426370885a5bce2c",
-                  "value": "6690"
-              }
-          ]
-      },
-      {
-          "id": "be5b3ca9cabb0ab351f841e01c5d320a",
-          "name": "YASMIN MARQUES ROFINO RODRIGUES",
-          "phone": "5511910386602",
-          "email": "yasmin_rofi22@hotmail.com",
-          "updatedAt": "2024-07-20T13:56:21.000Z",
-          "createdAt": "2024-07-20T13:56:21.000Z",
-          "customFields": [
-              {
-                  "id": "3393acec2c25dc21cd0be1a9a96eefd5",
-                  "value": "23/07/2024"
-              },
-              {
-                  "id": "5e1397fd3b44b6f71b62ba9942aa8c8e",
-                  "value": "ATIVO"
-              },
-              {
-                  "id": "a95afc4f82126d2cae1ba51590744214",
-                  "value": ""
-              },
-              {
-                  "id": "dd8c6a4819b484f22fe54cbe80b3c5fc",
-                  "value": "LOJAS"
-              },
-              {
-                  "id": "dea8f28106184ba46a6fd1bb1f539337",
-                  "value": ""
-              },
-              {
-                  "id": "e92bbb5ae8ca252cec61cdd56eda8f7e",
-                  "value": ""
-              },
-              {
-                  "id": "cb1b981295801953596756e4289e76bc",
-                  "value": ""
-              },
-              {
-                  "id": "03cf509f48333998426370885a5bce2c",
-                  "value": "6691"
-              }
-          ]
-      }
-  ],
+    {
+        "id": "996eee2a66e9dbc33a0aba9ee7e2e360",
+        "name": "ANTONIO JEFERSON SOARES DA SILVA ANDRADE",
+        "phone": "5511940282921",
+        "email": "antoniojefersonandrade0@gmail.com",
+        "updatedAt": "2024-07-26T20:38:57.000Z",
+        "createdAt": "2024-07-26T20:38:57.000Z",
+        "customFields": [
+            {
+                "id": "3393acec2c25dc21cd0be1a9a96eefd5",
+                "value": "30/07/2024"
+            },
+            {
+                "id": "5e1397fd3b44b6f71b62ba9942aa8c8e",
+                "value": "ATIVO"
+            },
+            {
+                "id": "a95afc4f82126d2cae1ba51590744214",
+                "value": ""
+            },
+            {
+                "id": "dd8c6a4819b484f22fe54cbe80b3c5fc",
+                "value": "LOJAS"
+            },
+            {
+                "id": "dea8f28106184ba46a6fd1bb1f539337",
+                "value": "0"
+            },
+            {
+                "id": "e92bbb5ae8ca252cec61cdd56eda8f7e",
+                "value": ""
+            },
+            {
+                "id": "cb1b981295801953596756e4289e76bc",
+                "value": ""
+            },
+            {
+                "id": "03cf509f48333998426370885a5bce2c",
+                "value": "6693"
+            }
+        ]
+    },
+    {
+        "id": "8b49278fa94e7df200390b3a9bdd2424",
+        "name": "VINICIOS DE SOUSA BEZERRA",
+        "phone": "5511962920858",
+        "email": "viniiciusbezerra@icloud.com",
+        "updatedAt": "2024-07-26T20:39:48.000Z",
+        "createdAt": "2024-07-26T20:39:48.000Z",
+        "customFields": [
+            {
+                "id": "3393acec2c25dc21cd0be1a9a96eefd5",
+                "value": "30/07/2024"
+            },
+            {
+                "id": "5e1397fd3b44b6f71b62ba9942aa8c8e",
+                "value": "ATIVO"
+            },
+            {
+                "id": "a95afc4f82126d2cae1ba51590744214",
+                "value": ""
+            },
+            {
+                "id": "dd8c6a4819b484f22fe54cbe80b3c5fc",
+                "value": "LOJAS"
+            },
+            {
+                "id": "dea8f28106184ba46a6fd1bb1f539337",
+                "value": "0"
+            },
+            {
+                "id": "e92bbb5ae8ca252cec61cdd56eda8f7e",
+                "value": ""
+            },
+            {
+                "id": "cb1b981295801953596756e4289e76bc",
+                "value": ""
+            },
+            {
+                "id": "03cf509f48333998426370885a5bce2c",
+                "value": "6694"
+            }
+        ]
+    },
+    {
+        "id": "a147032f380827dff71b5d57804a0041",
+        "name": "ELISANGELA CONCEICAO VENTURA VIEIRA",
+        "phone": "5527998707351",
+        "email": "elisangelaconceicao9783@gmail.com",
+        "updatedAt": "2024-07-26T20:40:37.000Z",
+        "createdAt": "2024-07-26T20:40:37.000Z",
+        "customFields": [
+            {
+                "id": "3393acec2c25dc21cd0be1a9a96eefd5",
+                "value": "30/07/2024"
+            },
+            {
+                "id": "5e1397fd3b44b6f71b62ba9942aa8c8e",
+                "value": "ATIVO"
+            },
+            {
+                "id": "a95afc4f82126d2cae1ba51590744214",
+                "value": ""
+            },
+            {
+                "id": "dd8c6a4819b484f22fe54cbe80b3c5fc",
+                "value": "CD"
+            },
+            {
+                "id": "dea8f28106184ba46a6fd1bb1f539337",
+                "value": "0"
+            },
+            {
+                "id": "e92bbb5ae8ca252cec61cdd56eda8f7e",
+                "value": ""
+            },
+            {
+                "id": "cb1b981295801953596756e4289e76bc",
+                "value": ""
+            },
+            {
+                "id": "03cf509f48333998426370885a5bce2c",
+                "value": "6695"
+            }
+        ]
+    },
+    {
+        "id": "968b12faee38b1b35dc5d12a8b5e657f",
+        "name": "MARIANA MATIAS SOUZA",
+        "phone": "5511947881634",
+        "email": "Marianams9@hotmail.com",
+        "updatedAt": "2024-07-26T20:41:00.000Z",
+        "createdAt": "2024-07-26T20:41:00.000Z",
+        "customFields": [
+            {
+                "id": "3393acec2c25dc21cd0be1a9a96eefd5",
+                "value": "30/07/2024"
+            },
+            {
+                "id": "5e1397fd3b44b6f71b62ba9942aa8c8e",
+                "value": "ATIVO"
+            },
+            {
+                "id": "a95afc4f82126d2cae1ba51590744214",
+                "value": ""
+            },
+            {
+                "id": "dd8c6a4819b484f22fe54cbe80b3c5fc",
+                "value": "MATRIZ"
+            },
+            {
+                "id": "dea8f28106184ba46a6fd1bb1f539337",
+                "value": "1"
+            },
+            {
+                "id": "e92bbb5ae8ca252cec61cdd56eda8f7e",
+                "value": ""
+            },
+            {
+                "id": "cb1b981295801953596756e4289e76bc",
+                "value": ""
+            },
+            {
+                "id": "03cf509f48333998426370885a5bce2c",
+                "value": "6696"
+            }
+        ]
+    }
+],
   "message": "Sucesso"
 }
