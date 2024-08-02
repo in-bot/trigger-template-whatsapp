@@ -47,7 +47,7 @@ async function triggerRulesOrganicosDeFatima() {
                 await createCustomerOnTable(client)
             }
         }
-    createTriggerOrganicos(13, clients)
+    createTriggerOrganicos(11, clients)
     }
 };
 
