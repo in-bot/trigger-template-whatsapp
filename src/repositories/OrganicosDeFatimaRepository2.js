@@ -97,4 +97,5 @@ const fetchAllPagesCustomer = async () => {
     console.error("An error occurred in fetchAllPages function.", error);
   }
 };
+
 module.exports = fetchAllPagesCustomer;

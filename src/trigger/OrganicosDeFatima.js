@@ -3,26 +3,39 @@ const axios = require("axios");
 const organicos = require("../repositories/OrganicosDeFatimaRepository");
 // const mock = require("../mock/organicos.json")
 
-const createCustomerOnTable = (client, boletos) => {
-  for (let boleto of boletos) {
-    const field = client.customFields.find(
-      (f) => f.id === "164a97709ab8b38a924f5e294cacc01b"
-    );
-    if (field) {
-      field.value = boleto;
-    }
-    if (boletos.length < 6) {
-      const headers = {
-        Authorization:
-          "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJib3RfaWQiOjc1MiwiaWF0IjoxNzE4Njc0NjE0fQ.0Kb-sVvHklRvDaFOtCt0YKgUWP9O0brh9Ha0-QMNf14",
-      };
-      axios
-        .post("https://api.inbot.com.br/user-manager/v1/customer", client, {
-          headers,
-        })
-        .then((resp) => console.log(resp.data))
-        .catch((error) => console.log(error.data));
-    }
+const createCustomerOnTable = async (customer) => {
+  for (let boleto of customer.id) {
+    console.log(boleto);
+    const client = {
+      botId: "752",
+      phone: customer.fone,
+      name: customer.nome,
+      customFields: [
+        {
+          id: "5fd0b60d176e7280b45137e59a0a5c47",
+          value: customer.cpf_cnpj.replace(/\D/g, ""),
+        },
+        {
+          id: "e8d2ebd87fc532e758a2219ebe91581f",
+          value: customer?.status ?? "",
+        },
+        { id: "8f6b1db53b5f7a8e3262035c24001509", value: new Date() },
+        { id: "a8583aa41ecc54f905cf7920b3c42f31", value: "" },
+        { id: "a9021f78304e4e7632f8288057783e76", value: "" },
+        { id: "c754f12ab4af5b3e73a34c5996ead8cd", value: "" },
+        { id: "164a97709ab8b38a924f5e294cacc01b", value: boleto }, // Boleto Id
+      ],
+    };
+    const headers = {
+      Authorization:
+        "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJib3RfaWQiOjc1MiwiaWF0IjoxNzE4Njc0NjE0fQ.0Kb-sVvHklRvDaFOtCt0YKgUWP9O0brh9Ha0-QMNf14",
+    };
+    axios
+      .post("https://api.inbot.com.br/user-manager/v1/customer", client, {
+        headers,
+      })
+      .then((resp) => console.log(resp.data))
+      .catch((error) => console.log(error.data));
   }
 };
 
@@ -30,6 +43,7 @@ async function triggerRulesOrganicosDeFatima() {
   const comparisonTime = "12:04"; // HORARIO CORRETO
   const timeString = util.timeString();
   const timeIn24HourFormat = util.convertTo24Hour(timeString);
+
   if (
     util.timeToMinutes(timeIn24HourFormat) ===
       util.timeToMinutes(comparisonTime) &&
@@ -58,12 +72,12 @@ async function triggerRulesOrganicosDeFatima() {
             { id: "a8583aa41ecc54f905cf7920b3c42f31", value: "" },
             { id: "a9021f78304e4e7632f8288057783e76", value: "" },
             { id: "c754f12ab4af5b3e73a34c5996ead8cd", value: "" },
-            { id: "164a97709ab8b38a924f5e294cacc01b", value: "" },
+            { id: "164a97709ab8b38a924f5e294cacc01b", value: "" }, //
           ],
         };
         console.log(client);
         clients.push(client);
-        await createCustomerOnTable(client, customer.id);
+        await createCustomerOnTable(customer);
       }
     }
     createTriggerOrganicos(11, clients);
@@ -120,4 +134,5 @@ async function createTriggerOrganicos(hour, customers) {
     console.error("Erro ao enviar solicitação:", error);
   }
 }
+
 module.exports = triggerRulesOrganicosDeFatima;

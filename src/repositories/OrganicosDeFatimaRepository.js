@@ -102,5 +102,3 @@ const fetchAllPages = async () => {
 module.exports = {
   fetchAllPages,
 };
-
-fetchAllPages();
