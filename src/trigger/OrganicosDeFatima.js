@@ -11,16 +11,18 @@ const createCustomerOnTable = (client, boletos) => {
     if (field) {
       field.value = boleto;
     }
-    const headers = {
-      Authorization:
-        "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJib3RfaWQiOjc1MiwiaWF0IjoxNzE4Njc0NjE0fQ.0Kb-sVvHklRvDaFOtCt0YKgUWP9O0brh9Ha0-QMNf14",
-    };
-    axios
-      .post("https://api.inbot.com.br/user-manager/v1/customer", client, {
-        headers,
-      })
-      .then((resp) => console.log(resp.data))
-      .catch((error) => console.log(error.data));
+    if (boletos.length < 6) {
+      const headers = {
+        Authorization:
+          "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJib3RfaWQiOjc1MiwiaWF0IjoxNzE4Njc0NjE0fQ.0Kb-sVvHklRvDaFOtCt0YKgUWP9O0brh9Ha0-QMNf14",
+      };
+      axios
+        .post("https://api.inbot.com.br/user-manager/v1/customer", client, {
+          headers,
+        })
+        .then((resp) => console.log(resp.data))
+        .catch((error) => console.log(error.data));
+    }
   }
 };
 
