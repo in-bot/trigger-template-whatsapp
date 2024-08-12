@@ -9,30 +9,44 @@ async function triggerRulesAramisTestes() {
 
     let data = new Date();
 
-    let comparisonTime = "17:56"; //HORARIO CORRETO
-    if (util.timeToMinutes(timeIn24HourFormat) === util.timeToMinutes(comparisonTime) ) { //&& data.getDay() === 5
+    let comparisonTime = "10:10"; //HORARIO CORRETO
+    if (util.timeToMinutes(timeIn24HourFormat) === util.timeToMinutes(comparisonTime) && data.getDay() === 6) { 
 
         data.setDate(data.getDate() + 3);
         const proximaSegunda = data.toLocaleDateString('pt-BR');
-        console.log(proximaSegunda)
-            const customer = mockFunc;
+        console.log(util.nextWeekEnd())
+        console.log(util.nextWeekStart())
+        try {
+            const _customer = await axios.get('http://localhost:19000/customer-manager/customer-by-week/botId/744', {
+              params: {
+                startDate: util.nextWeekStart(),
+                endDate: util.nextWeekEnd(),
+                parameter: '3393acec2c25dc21cd0be1a9a96eefd5'
+              }
+            });
+            const customer = _customer.data
+            console.log(customer)
             const customersLojas = filterTypeCompany(customer,'LOJAS')
             const customersCD = filterTypeCompany(customer,'MATRIZ')
             const customersMatriz = filterTypeCompany(customer,'CD')
-            createTriggerAramis(5,0, customer, "01", "ONB_1_OPTOUT", 3);
-            createTriggerAramis(5,0, customer, "2", "ONB_2_MENS_CEO", 4);
-            createTriggerAramis(5,0, customer, "03", "ONB_3_EXP_LOJA", 5);
-            createTriggerAramis(5,0, customer, "04", "ONB_4_PONTO", 6);
-            createTriggerAramis(5,0, customer, "05", "ONB_5_PERFORM", 7);
-            createTriggerAramis(5,0, customer, "06", "ONB_6_PILAR1", 10);
-            createTriggerAramis(5,0, customer, "07", "ONB_7_HISTORIA", 11);
-            createTriggerAramis(5,0, customer, "08", "ONB_8_ARAMIS", 12);
-            createTriggerAramis(5,0, customer, "09", "ONB_9_LINHAS", 13);
-            createTriggerAramis(5,0, customer, "010", "ONB_10_LIDERANCA", 14);
-            createTriggerAramis(5,0, customer, "11", "MENU_SUSTENTABILIDADE_BOTOES", 17);
-            createTriggerAramis(14,0, customersCD, "formulario", "ONB_AV_INST_P1", 4); // APENAS MATRIZ OU CD
-            createTriggerAramis(14,0, customersMatriz, "formulario", "ONB_AV_INST_P1", 4); // APENAS MATRIZ OU CD
-            createTriggerAramis(14,0, customersLojas, "formulario", "ONB_AV_INST_P1", 5); // APENAS LOJAS
+            createTriggerAramis(5,0, customer, "01", "ONB_1_OPTOUT", 2);
+            createTriggerAramis(5,0, customer, "2", "ONB_2_MENS_CEO", 3);
+            createTriggerAramis(5,0, customer, "03", "ONB_3_EXP_LOJA", 4);
+            createTriggerAramis(5,0, customer, "04", "ONB_4_PONTO", 5);
+            createTriggerAramis(5,0, customer, "05", "ONB_5_PERFORM", 6);
+            createTriggerAramis(5,0, customer, "06", "ONB_6_PILAR1", 9);
+            createTriggerAramis(5,0, customer, "07", "ONB_7_HISTORIA", 10);
+            createTriggerAramis(5,0, customer, "08", "ONB_8_ARAMIS", 11);
+            createTriggerAramis(5,0, customer, "09", "ONB_9_LINHAS", 12);
+            createTriggerAramis(5,0, customer, "010", "ONB_10_LIDERANCA", 13);
+            createTriggerAramis(5,0, customer, "11", "MENU_SUSTENTABILIDADE_BOTOES", 16);
+            createTriggerAramis(14,0, customersCD, "formulario", "ONB_AV_INST_P1", 3); // APENAS MATRIZ OU CD
+            createTriggerAramis(14,0, customersMatriz, "formulario", "ONB_AV_INST_P1", 3); // APENAS MATRIZ OU CD
+            createTriggerAramis(14,0, customersLojas, "formulario", "ONB_AV_INST_P1", 4); // APENAS LOJAS
+        } catch (error) {
+            console.error('Error fetching customer data:', error.message);
+            throw error; // Re-throws the error after logging it
+          }
     }
 }
 

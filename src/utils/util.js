@@ -1,3 +1,5 @@
+const moment = require('moment');
+
 const timeToMinutes = (time) => {
     const [hours, minutes] = time.split(':').map(Number);
     return hours * 60 + minutes;
@@ -50,13 +52,34 @@ const daysOfWeek = () => {
     return !weekend.includes(data.getDay())
 }
 
+const isEmptyObject = (value) => {
+    if (value == null) {
+      return false;
+    }
+}
+const isHasOwnProperty = (object, param) => {
+    return !isEmptyObject(object) && Object.prototype.hasOwnProperty.call(object, param); 
+  }
+
+const nextWeekStart = () => {
+    const date =  moment().add(1, 'week').startOf('week');
+    return date.format('YYYY-MM-DD')
+  }
+const nextWeekEnd = () => {
+    const date =  moment().add(1, 'week').endOf('week');
+    return date.format('YYYY-MM-DD')
+  }
+
 module.exports = {
     timeToMinutes,
+    nextWeekStart,
+    nextWeekEnd,
     convertTo24Hour,
     timeString,
     daysOfWeek,
     sleep,
     sumQtyDay,
     businessWeek,
-    delay
+    delay,
+    isHasOwnProperty
 }
