@@ -1,5 +1,5 @@
 const axios = require("axios");
-const util = require("../utils/util")
+const util = require("../utils/util");
 
 const fetchAllPagesCustomer = require("./OrganicosDeFatimaRepository2");
 
@@ -59,6 +59,7 @@ const fetchPage = async (input) => {
     if (resp?.data?.retorno?.contatos[0].length > 1) {
       return console.log("Cadastro Duplicado");
     }
+    input.id = util.stringToArray(input.id);
     input.id_contato = body.id;
     input.fone = body.fone
       .replace("(", "55")
@@ -66,7 +67,7 @@ const fetchPage = async (input) => {
       .replace(" ", "")
       .replace("-", "");
     input.cpf_cnpj = body.cpf_cnpj;
-    console.log(new Date(), requestOptions.data.pesquisa, `Customer: ${input}`);
+    console.log(new Date(), requestOptions.data.pesquisa, input);
     return input;
   } catch (err) {
     console.log(err);
@@ -97,5 +98,5 @@ const fetchAllPages = async () => {
 };
 
 module.exports = {
-  fetchAllPages
-}
+  fetchAllPages,
+};
