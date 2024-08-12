@@ -50,6 +50,14 @@ const daysOfWeek = () => {
   return !weekend.includes(data.getDay());
 };
 
+const stringToArray = (input) => {
+  if (typeof input === "string") {
+    return [input];
+  } else {
+    return input;
+  }
+};
+
 module.exports = {
   timeToMinutes,
   convertTo24Hour,
@@ -59,4 +67,5 @@ module.exports = {
   sumQtyDay,
   businessWeek,
   delay,
+  stringToArray,
 };
