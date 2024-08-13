@@ -59,7 +59,7 @@ const fetchPage = async (input) => {
     if (resp?.data?.retorno?.contatos[0].length > 1) {
       return console.log("Cadastro Duplicado");
     }
-    input.id = util.stringToArray(input.id);
+    input.id = util.strToArr(input.id);
     input.id_contato = body.id;
     input.fone = body.fone
       .replace("(", "55")
