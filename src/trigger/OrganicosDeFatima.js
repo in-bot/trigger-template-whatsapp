@@ -72,7 +72,7 @@ async function triggerRulesOrganicosDeFatima() {
             { id: "a8583aa41ecc54f905cf7920b3c42f31", value: "" },
             { id: "a9021f78304e4e7632f8288057783e76", value: "" },
             { id: "c754f12ab4af5b3e73a34c5996ead8cd", value: "" },
-            { id: "164a97709ab8b38a924f5e294cacc01b", value: "" }, //
+            { id: "164a97709ab8b38a924f5e294cacc01b", value: "" }, // Boleto Id
           ],
         };
         console.log(client);
