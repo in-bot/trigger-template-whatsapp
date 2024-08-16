@@ -1,5 +1,5 @@
 const util = require("../utils/util")
-const mockFunc = require("../mock/aramisFuncionarios.json")
+// const mockFunc = require("../mock/aramisFuncionarios.json")
 const axios = require("axios")
 
 async function triggerRulesAramisTestes() {
@@ -13,7 +13,6 @@ async function triggerRulesAramisTestes() {
     if (util.timeToMinutes(timeIn24HourFormat) === util.timeToMinutes(comparisonTime) && data.getDay() === 6) { 
 
         data.setDate(data.getDate() + 3);
-        const proximaSegunda = data.toLocaleDateString('pt-BR');
         console.log(util.nextWeekEnd())
         console.log(util.nextWeekStart())
         try {
