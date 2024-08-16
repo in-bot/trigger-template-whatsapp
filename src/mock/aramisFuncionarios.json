@@ -1,173 +1,761 @@
 {
-  "data": [
-    {
-        "id": "996eee2a66e9dbc33a0aba9ee7e2e360",
-        "name": "ANTONIO JEFERSON SOARES DA SILVA ANDRADE",
-        "phone": "5511940282921",
-        "email": "antoniojefersonandrade0@gmail.com",
-        "updatedAt": "2024-07-26T20:38:57.000Z",
-        "createdAt": "2024-07-26T20:38:57.000Z",
-        "customFields": [
-            {
-                "id": "3393acec2c25dc21cd0be1a9a96eefd5",
-                "value": "30/07/2024"
-            },
-            {
-                "id": "5e1397fd3b44b6f71b62ba9942aa8c8e",
-                "value": "ATIVO"
-            },
-            {
-                "id": "a95afc4f82126d2cae1ba51590744214",
-                "value": ""
-            },
-            {
-                "id": "dd8c6a4819b484f22fe54cbe80b3c5fc",
-                "value": "LOJAS"
-            },
-            {
-                "id": "dea8f28106184ba46a6fd1bb1f539337",
-                "value": "0"
-            },
-            {
-                "id": "e92bbb5ae8ca252cec61cdd56eda8f7e",
-                "value": ""
-            },
-            {
-                "id": "cb1b981295801953596756e4289e76bc",
-                "value": ""
-            },
-            {
-                "id": "03cf509f48333998426370885a5bce2c",
-                "value": "6693"
-            }
-        ]
-    },
-    {
-        "id": "8b49278fa94e7df200390b3a9bdd2424",
-        "name": "VINICIOS DE SOUSA BEZERRA",
-        "phone": "5511962920858",
-        "email": "viniiciusbezerra@icloud.com",
-        "updatedAt": "2024-07-26T20:39:48.000Z",
-        "createdAt": "2024-07-26T20:39:48.000Z",
-        "customFields": [
-            {
-                "id": "3393acec2c25dc21cd0be1a9a96eefd5",
-                "value": "30/07/2024"
-            },
-            {
-                "id": "5e1397fd3b44b6f71b62ba9942aa8c8e",
-                "value": "ATIVO"
-            },
-            {
-                "id": "a95afc4f82126d2cae1ba51590744214",
-                "value": ""
-            },
-            {
-                "id": "dd8c6a4819b484f22fe54cbe80b3c5fc",
-                "value": "LOJAS"
-            },
-            {
-                "id": "dea8f28106184ba46a6fd1bb1f539337",
-                "value": "0"
-            },
-            {
-                "id": "e92bbb5ae8ca252cec61cdd56eda8f7e",
-                "value": ""
-            },
-            {
-                "id": "cb1b981295801953596756e4289e76bc",
-                "value": ""
-            },
-            {
-                "id": "03cf509f48333998426370885a5bce2c",
-                "value": "6694"
-            }
-        ]
-    },
-    {
-        "id": "a147032f380827dff71b5d57804a0041",
-        "name": "ELISANGELA CONCEICAO VENTURA VIEIRA",
-        "phone": "5527998707351",
-        "email": "elisangelaconceicao9783@gmail.com",
-        "updatedAt": "2024-07-26T20:40:37.000Z",
-        "createdAt": "2024-07-26T20:40:37.000Z",
-        "customFields": [
-            {
-                "id": "3393acec2c25dc21cd0be1a9a96eefd5",
-                "value": "30/07/2024"
-            },
-            {
-                "id": "5e1397fd3b44b6f71b62ba9942aa8c8e",
-                "value": "ATIVO"
-            },
-            {
-                "id": "a95afc4f82126d2cae1ba51590744214",
-                "value": ""
-            },
-            {
-                "id": "dd8c6a4819b484f22fe54cbe80b3c5fc",
-                "value": "CD"
-            },
-            {
-                "id": "dea8f28106184ba46a6fd1bb1f539337",
-                "value": "0"
-            },
-            {
-                "id": "e92bbb5ae8ca252cec61cdd56eda8f7e",
-                "value": ""
-            },
-            {
-                "id": "cb1b981295801953596756e4289e76bc",
-                "value": ""
-            },
-            {
-                "id": "03cf509f48333998426370885a5bce2c",
-                "value": "6695"
-            }
-        ]
-    },
-    {
-        "id": "968b12faee38b1b35dc5d12a8b5e657f",
-        "name": "MARIANA MATIAS SOUZA",
-        "phone": "5511947881634",
-        "email": "Marianams9@hotmail.com",
-        "updatedAt": "2024-07-26T20:41:00.000Z",
-        "createdAt": "2024-07-26T20:41:00.000Z",
-        "customFields": [
-            {
-                "id": "3393acec2c25dc21cd0be1a9a96eefd5",
-                "value": "30/07/2024"
-            },
-            {
-                "id": "5e1397fd3b44b6f71b62ba9942aa8c8e",
-                "value": "ATIVO"
-            },
-            {
-                "id": "a95afc4f82126d2cae1ba51590744214",
-                "value": ""
-            },
-            {
-                "id": "dd8c6a4819b484f22fe54cbe80b3c5fc",
-                "value": "MATRIZ"
-            },
-            {
-                "id": "dea8f28106184ba46a6fd1bb1f539337",
-                "value": "1"
-            },
-            {
-                "id": "e92bbb5ae8ca252cec61cdd56eda8f7e",
-                "value": ""
-            },
-            {
-                "id": "cb1b981295801953596756e4289e76bc",
-                "value": ""
-            },
-            {
-                "id": "03cf509f48333998426370885a5bce2c",
-                "value": "6696"
-            }
-        ]
-    }
-],
-  "message": "Sucesso"
+    "data": [
+        {
+            "id": "e3e9002bd28190ed4a559383b20b8da7",
+            "name": "DANILO RODRIGUES MACHADO",
+            "phone": "5519999396744",
+            "email": "danilo.dilmara@gmail.com",
+            "updatedAt": "2024-08-10T03:55:09.000Z",
+            "createdAt": "2024-08-10T03:55:09.000Z",
+            "customFields": [
+                {
+                    "id": "3393acec2c25dc21cd0be1a9a96eefd5",
+                    "value": "13/08/2024"
+                },
+                {
+                    "id": "5e1397fd3b44b6f71b62ba9942aa8c8e",
+                    "value": "ATIVO"
+                },
+                {
+                    "id": "a95afc4f82126d2cae1ba51590744214",
+                    "value": "null"
+                },
+                {
+                    "id": "dd8c6a4819b484f22fe54cbe80b3c5fc",
+                    "value": "LOJAS"
+                },
+                {
+                    "id": "dea8f28106184ba46a6fd1bb1f539337",
+                    "value": "0"
+                },
+                {
+                    "id": "e92bbb5ae8ca252cec61cdd56eda8f7e",
+                    "value": "AUXILIAR DE VENDAS"
+                },
+                {
+                    "id": "cb1b981295801953596756e4289e76bc",
+                    "value": "Sim"
+                },
+                {
+                    "id": "03cf509f48333998426370885a5bce2c",
+                    "value": "6698"
+                }
+            ]
+        },
+        {
+            "id": "742a27c8085e45a0f95938938239954b",
+            "name": "EDNA DA SILVA SOUSA",
+            "phone": "5511984777515",
+            "email": "edna.mendiolla@gmail.com",
+            "updatedAt": "2024-08-10T03:55:09.000Z",
+            "createdAt": "2024-08-10T03:55:09.000Z",
+            "customFields": [
+                {
+                    "id": "3393acec2c25dc21cd0be1a9a96eefd5",
+                    "value": "13/08/2024"
+                },
+                {
+                    "id": "5e1397fd3b44b6f71b62ba9942aa8c8e",
+                    "value": "ATIVO"
+                },
+                {
+                    "id": "a95afc4f82126d2cae1ba51590744214",
+                    "value": "null"
+                },
+                {
+                    "id": "dd8c6a4819b484f22fe54cbe80b3c5fc",
+                    "value": "LOJAS"
+                },
+                {
+                    "id": "dea8f28106184ba46a6fd1bb1f539337",
+                    "value": "0"
+                },
+                {
+                    "id": "e92bbb5ae8ca252cec61cdd56eda8f7e",
+                    "value": "AUXILIAR DE VENDAS"
+                },
+                {
+                    "id": "cb1b981295801953596756e4289e76bc",
+                    "value": "Sim"
+                },
+                {
+                    "id": "03cf509f48333998426370885a5bce2c",
+                    "value": "6700"
+                }
+            ]
+        },
+        {
+            "id": "eeecf737eb0b83b29debbe19215fc43a",
+            "name": "VERONICA GOMES DA COSTA",
+            "phone": "5562991299792",
+            "email": "veronicagc802@gmail.com",
+            "updatedAt": "2024-08-10T03:55:09.000Z",
+            "createdAt": "2024-08-10T03:55:09.000Z",
+            "customFields": [
+                {
+                    "id": "3393acec2c25dc21cd0be1a9a96eefd5",
+                    "value": "13/08/2024"
+                },
+                {
+                    "id": "5e1397fd3b44b6f71b62ba9942aa8c8e",
+                    "value": "ATIVO"
+                },
+                {
+                    "id": "a95afc4f82126d2cae1ba51590744214",
+                    "value": "null"
+                },
+                {
+                    "id": "dd8c6a4819b484f22fe54cbe80b3c5fc",
+                    "value": "LOJAS"
+                },
+                {
+                    "id": "dea8f28106184ba46a6fd1bb1f539337",
+                    "value": "0"
+                },
+                {
+                    "id": "e92bbb5ae8ca252cec61cdd56eda8f7e",
+                    "value": "AUXILIAR DE VENDAS"
+                },
+                {
+                    "id": "cb1b981295801953596756e4289e76bc",
+                    "value": "Sim"
+                },
+                {
+                    "id": "03cf509f48333998426370885a5bce2c",
+                    "value": "6701"
+                }
+            ]
+        },
+        {
+            "id": "c28cc5fe120f9218c90e448806b5be73",
+            "name": "WALISSON DA SILVA ALEIXO",
+            "phone": "5562993142262",
+            "email": "Walissonaleixo23@gmail.com",
+            "updatedAt": "2024-08-10T03:55:09.000Z",
+            "createdAt": "2024-08-10T03:55:09.000Z",
+            "customFields": [
+                {
+                    "id": "3393acec2c25dc21cd0be1a9a96eefd5",
+                    "value": "13/08/2024"
+                },
+                {
+                    "id": "5e1397fd3b44b6f71b62ba9942aa8c8e",
+                    "value": "ATIVO"
+                },
+                {
+                    "id": "a95afc4f82126d2cae1ba51590744214",
+                    "value": "null"
+                },
+                {
+                    "id": "dd8c6a4819b484f22fe54cbe80b3c5fc",
+                    "value": "LOJAS"
+                },
+                {
+                    "id": "dea8f28106184ba46a6fd1bb1f539337",
+                    "value": "0"
+                },
+                {
+                    "id": "e92bbb5ae8ca252cec61cdd56eda8f7e",
+                    "value": "VENDEDOR"
+                },
+                {
+                    "id": "cb1b981295801953596756e4289e76bc",
+                    "value": "Sim"
+                },
+                {
+                    "id": "03cf509f48333998426370885a5bce2c",
+                    "value": "6699"
+                }
+            ]
+        },
+        {
+            "id": "3c668fc2988c112537e902fd084ee568",
+            "name": "KAYRLLA REBECA DE MOURA",
+            "phone": "5562992142486",
+            "email": "rebecakayrlla@gmail.com",
+            "updatedAt": "2024-08-10T03:55:09.000Z",
+            "createdAt": "2024-08-10T03:55:09.000Z",
+            "customFields": [
+                {
+                    "id": "3393acec2c25dc21cd0be1a9a96eefd5",
+                    "value": "13/08/2024"
+                },
+                {
+                    "id": "5e1397fd3b44b6f71b62ba9942aa8c8e",
+                    "value": "ATIVO"
+                },
+                {
+                    "id": "a95afc4f82126d2cae1ba51590744214",
+                    "value": "null"
+                },
+                {
+                    "id": "dd8c6a4819b484f22fe54cbe80b3c5fc",
+                    "value": "LOJAS"
+                },
+                {
+                    "id": "dea8f28106184ba46a6fd1bb1f539337",
+                    "value": "0"
+                },
+                {
+                    "id": "e92bbb5ae8ca252cec61cdd56eda8f7e",
+                    "value": "AUXILIAR DE VENDAS"
+                },
+                {
+                    "id": "cb1b981295801953596756e4289e76bc",
+                    "value": "Sim"
+                },
+                {
+                    "id": "03cf509f48333998426370885a5bce2c",
+                    "value": "6702"
+                }
+            ]
+        },
+        {
+            "id": "0ffd6260d5ee0b165db2e5b20adb1ea3",
+            "name": "DAYANNE CARVALHO DO NASCIMENTO",
+            "phone": "5562999628620",
+            "email": "dayannynhs@gmail.com",
+            "updatedAt": "2024-08-10T03:55:09.000Z",
+            "createdAt": "2024-08-10T03:55:09.000Z",
+            "customFields": [
+                {
+                    "id": "3393acec2c25dc21cd0be1a9a96eefd5",
+                    "value": "13/08/2024"
+                },
+                {
+                    "id": "5e1397fd3b44b6f71b62ba9942aa8c8e",
+                    "value": "ATIVO"
+                },
+                {
+                    "id": "a95afc4f82126d2cae1ba51590744214",
+                    "value": "null"
+                },
+                {
+                    "id": "dd8c6a4819b484f22fe54cbe80b3c5fc",
+                    "value": "LOJAS"
+                },
+                {
+                    "id": "dea8f28106184ba46a6fd1bb1f539337",
+                    "value": "0"
+                },
+                {
+                    "id": "e92bbb5ae8ca252cec61cdd56eda8f7e",
+                    "value": "CAIXA"
+                },
+                {
+                    "id": "cb1b981295801953596756e4289e76bc",
+                    "value": "Sim"
+                },
+                {
+                    "id": "03cf509f48333998426370885a5bce2c",
+                    "value": "6703"
+                }
+            ]
+        },
+        {
+            "id": "f057f7701782a248acaeddaad4a25d36",
+            "name": "LUIZ FELIPE FARIA DA ROCHA",
+            "phone": "5562991638452",
+            "email": "luiz06492@gmail.com",
+            "updatedAt": "2024-08-10T03:55:10.000Z",
+            "createdAt": "2024-08-10T03:55:10.000Z",
+            "customFields": [
+                {
+                    "id": "3393acec2c25dc21cd0be1a9a96eefd5",
+                    "value": "13/08/2024"
+                },
+                {
+                    "id": "5e1397fd3b44b6f71b62ba9942aa8c8e",
+                    "value": "ATIVO"
+                },
+                {
+                    "id": "a95afc4f82126d2cae1ba51590744214",
+                    "value": "null"
+                },
+                {
+                    "id": "dd8c6a4819b484f22fe54cbe80b3c5fc",
+                    "value": "LOJAS"
+                },
+                {
+                    "id": "dea8f28106184ba46a6fd1bb1f539337",
+                    "value": "0"
+                },
+                {
+                    "id": "e92bbb5ae8ca252cec61cdd56eda8f7e",
+                    "value": "AUXILIAR DE VENDAS"
+                },
+                {
+                    "id": "cb1b981295801953596756e4289e76bc",
+                    "value": "Sim"
+                },
+                {
+                    "id": "03cf509f48333998426370885a5bce2c",
+                    "value": "6704"
+                }
+            ]
+        },
+        {
+            "id": "9ae1da7116c833c40e6d1b1e6892b3d1",
+            "name": "PATRICIA CRISTINA DA SILVA SANTOS",
+            "phone": "5511967184797",
+            "email": "patisilva.vidasilva@gmail.com",
+            "updatedAt": "2024-08-10T03:55:10.000Z",
+            "createdAt": "2024-08-10T03:55:10.000Z",
+            "customFields": [
+                {
+                    "id": "3393acec2c25dc21cd0be1a9a96eefd5",
+                    "value": "13/08/2024"
+                },
+                {
+                    "id": "5e1397fd3b44b6f71b62ba9942aa8c8e",
+                    "value": "ATIVO"
+                },
+                {
+                    "id": "a95afc4f82126d2cae1ba51590744214",
+                    "value": "null"
+                },
+                {
+                    "id": "dd8c6a4819b484f22fe54cbe80b3c5fc",
+                    "value": "LOJAS"
+                },
+                {
+                    "id": "dea8f28106184ba46a6fd1bb1f539337",
+                    "value": "0"
+                },
+                {
+                    "id": "e92bbb5ae8ca252cec61cdd56eda8f7e",
+                    "value": "CAIXA"
+                },
+                {
+                    "id": "cb1b981295801953596756e4289e76bc",
+                    "value": "Sim"
+                },
+                {
+                    "id": "03cf509f48333998426370885a5bce2c",
+                    "value": "6705"
+                }
+            ]
+        },
+        {
+            "id": "d49f259911f0f552abb68942becc2c54",
+            "name": "FLAVIANE SANTOS DE FREITAS",
+            "phone": "5511954265437",
+            "email": "flaviane1991@gmail.com",
+            "updatedAt": "2024-08-10T03:55:10.000Z",
+            "createdAt": "2024-08-10T03:55:10.000Z",
+            "customFields": [
+                {
+                    "id": "3393acec2c25dc21cd0be1a9a96eefd5",
+                    "value": "13/08/2024"
+                },
+                {
+                    "id": "5e1397fd3b44b6f71b62ba9942aa8c8e",
+                    "value": "ATIVO"
+                },
+                {
+                    "id": "a95afc4f82126d2cae1ba51590744214",
+                    "value": "null"
+                },
+                {
+                    "id": "dd8c6a4819b484f22fe54cbe80b3c5fc",
+                    "value": "LOJAS"
+                },
+                {
+                    "id": "dea8f28106184ba46a6fd1bb1f539337",
+                    "value": "0"
+                },
+                {
+                    "id": "e92bbb5ae8ca252cec61cdd56eda8f7e",
+                    "value": "VENDEDOR"
+                },
+                {
+                    "id": "cb1b981295801953596756e4289e76bc",
+                    "value": "Sim"
+                },
+                {
+                    "id": "03cf509f48333998426370885a5bce2c",
+                    "value": "6706"
+                }
+            ]
+        },
+        {
+            "id": "3ae2623aafe8b4f6d96b685d3ceb30b1",
+            "name": "ANTONIO JEFERSON DE OLIVEIRA FERNANDES",
+            "phone": "5527920000363",
+            "email": "jerfersonyeshua@gmail.com",
+            "updatedAt": "2024-08-10T03:55:10.000Z",
+            "createdAt": "2024-08-10T03:55:10.000Z",
+            "customFields": [
+                {
+                    "id": "3393acec2c25dc21cd0be1a9a96eefd5",
+                    "value": "13/08/2024"
+                },
+                {
+                    "id": "5e1397fd3b44b6f71b62ba9942aa8c8e",
+                    "value": "ATIVO"
+                },
+                {
+                    "id": "a95afc4f82126d2cae1ba51590744214",
+                    "value": "null"
+                },
+                {
+                    "id": "dd8c6a4819b484f22fe54cbe80b3c5fc",
+                    "value": "CD"
+                },
+                {
+                    "id": "dea8f28106184ba46a6fd1bb1f539337",
+                    "value": "0"
+                },
+                {
+                    "id": "e92bbb5ae8ca252cec61cdd56eda8f7e",
+                    "value": "OPERADOR DE LOGISTICA I"
+                },
+                {
+                    "id": "cb1b981295801953596756e4289e76bc",
+                    "value": "Sim"
+                },
+                {
+                    "id": "03cf509f48333998426370885a5bce2c",
+                    "value": "6707"
+                }
+            ]
+        },
+        {
+            "id": "e0d01f80b20f56e76b268b19a6774beb",
+            "name": "BRENDA TEODORO DA SILVA",
+            "phone": "5527992438939",
+            "email": "Brendateodoro2008@gmail.com",
+            "updatedAt": "2024-08-10T03:55:10.000Z",
+            "createdAt": "2024-08-10T03:55:10.000Z",
+            "customFields": [
+                {
+                    "id": "3393acec2c25dc21cd0be1a9a96eefd5",
+                    "value": "13/08/2024"
+                },
+                {
+                    "id": "5e1397fd3b44b6f71b62ba9942aa8c8e",
+                    "value": "ATIVO"
+                },
+                {
+                    "id": "a95afc4f82126d2cae1ba51590744214",
+                    "value": "null"
+                },
+                {
+                    "id": "dd8c6a4819b484f22fe54cbe80b3c5fc",
+                    "value": "CD"
+                },
+                {
+                    "id": "dea8f28106184ba46a6fd1bb1f539337",
+                    "value": "0"
+                },
+                {
+                    "id": "e92bbb5ae8ca252cec61cdd56eda8f7e",
+                    "value": "ANALISTA DE PREVENÇÃO DE PERDAS JR"
+                },
+                {
+                    "id": "cb1b981295801953596756e4289e76bc",
+                    "value": "Sim"
+                },
+                {
+                    "id": "03cf509f48333998426370885a5bce2c",
+                    "value": "6708"
+                }
+            ]
+        },
+        {
+            "id": "229b3d6b81f6f58b458a9aaedb96c895",
+            "name": "FRANCISCO ELIOMAR LIMA DA SILVA",
+            "phone": "5585988580054",
+            "email": "leomarlimardasilva1@gmail.com",
+            "updatedAt": "2024-08-10T03:55:10.000Z",
+            "createdAt": "2024-08-10T03:55:10.000Z",
+            "customFields": [
+                {
+                    "id": "3393acec2c25dc21cd0be1a9a96eefd5",
+                    "value": "13/08/2024"
+                },
+                {
+                    "id": "5e1397fd3b44b6f71b62ba9942aa8c8e",
+                    "value": "ATIVO"
+                },
+                {
+                    "id": "a95afc4f82126d2cae1ba51590744214",
+                    "value": "null"
+                },
+                {
+                    "id": "dd8c6a4819b484f22fe54cbe80b3c5fc",
+                    "value": "LOJAS"
+                },
+                {
+                    "id": "dea8f28106184ba46a6fd1bb1f539337",
+                    "value": "0"
+                },
+                {
+                    "id": "e92bbb5ae8ca252cec61cdd56eda8f7e",
+                    "value": "AUXILIAR DE VENDAS"
+                },
+                {
+                    "id": "cb1b981295801953596756e4289e76bc",
+                    "value": "Sim"
+                },
+                {
+                    "id": "03cf509f48333998426370885a5bce2c",
+                    "value": "6709"
+                }
+            ]
+        },
+        {
+            "id": "56a862bf284af64ae7e6e087d9b0d9ed",
+            "name": "ALAN RODRIGUES SILVA DE MORAES",
+            "phone": "5581995162116",
+            "email": "Alamoraez@gmail.com",
+            "updatedAt": "2024-08-10T03:55:11.000Z",
+            "createdAt": "2024-08-10T03:55:11.000Z",
+            "customFields": [
+                {
+                    "id": "3393acec2c25dc21cd0be1a9a96eefd5",
+                    "value": "13/08/2024"
+                },
+                {
+                    "id": "5e1397fd3b44b6f71b62ba9942aa8c8e",
+                    "value": "ATIVO"
+                },
+                {
+                    "id": "a95afc4f82126d2cae1ba51590744214",
+                    "value": "null"
+                },
+                {
+                    "id": "dd8c6a4819b484f22fe54cbe80b3c5fc",
+                    "value": "LOJAS"
+                },
+                {
+                    "id": "dea8f28106184ba46a6fd1bb1f539337",
+                    "value": "0"
+                },
+                {
+                    "id": "e92bbb5ae8ca252cec61cdd56eda8f7e",
+                    "value": "ESTOQUISTA"
+                },
+                {
+                    "id": "cb1b981295801953596756e4289e76bc",
+                    "value": "Sim"
+                },
+                {
+                    "id": "03cf509f48333998426370885a5bce2c",
+                    "value": "6710"
+                }
+            ]
+        },
+        {
+            "id": "ca1a46e4f6972d97ea6dd7468835bed1",
+            "name": "LEANDRO DIAS LOPES",
+            "phone": "5534997108839",
+            "email": "leandronissan4@gmail.com",
+            "updatedAt": "2024-08-10T03:55:11.000Z",
+            "createdAt": "2024-08-10T03:55:11.000Z",
+            "customFields": [
+                {
+                    "id": "3393acec2c25dc21cd0be1a9a96eefd5",
+                    "value": "13/08/2024"
+                },
+                {
+                    "id": "5e1397fd3b44b6f71b62ba9942aa8c8e",
+                    "value": "ATIVO"
+                },
+                {
+                    "id": "a95afc4f82126d2cae1ba51590744214",
+                    "value": "null"
+                },
+                {
+                    "id": "dd8c6a4819b484f22fe54cbe80b3c5fc",
+                    "value": "LOJAS"
+                },
+                {
+                    "id": "dea8f28106184ba46a6fd1bb1f539337",
+                    "value": "0"
+                },
+                {
+                    "id": "e92bbb5ae8ca252cec61cdd56eda8f7e",
+                    "value": "VENDEDOR"
+                },
+                {
+                    "id": "cb1b981295801953596756e4289e76bc",
+                    "value": "Sim"
+                },
+                {
+                    "id": "03cf509f48333998426370885a5bce2c",
+                    "value": "6711"
+                }
+            ]
+        },
+        {
+            "id": "2167f64bb852fd36d540dfa328ce472c",
+            "name": "AGATHA BELO TAVARES DOS SANTOS",
+            "phone": "5519996706479",
+            "email": "agathabt@outlook.com",
+            "updatedAt": "2024-08-10T03:55:11.000Z",
+            "createdAt": "2024-08-10T03:55:11.000Z",
+            "customFields": [
+                {
+                    "id": "3393acec2c25dc21cd0be1a9a96eefd5",
+                    "value": "13/08/2024"
+                },
+                {
+                    "id": "5e1397fd3b44b6f71b62ba9942aa8c8e",
+                    "value": "ATIVO"
+                },
+                {
+                    "id": "a95afc4f82126d2cae1ba51590744214",
+                    "value": "null"
+                },
+                {
+                    "id": "dd8c6a4819b484f22fe54cbe80b3c5fc",
+                    "value": "LOJAS"
+                },
+                {
+                    "id": "dea8f28106184ba46a6fd1bb1f539337",
+                    "value": "0"
+                },
+                {
+                    "id": "e92bbb5ae8ca252cec61cdd56eda8f7e",
+                    "value": "VENDEDOR"
+                },
+                {
+                    "id": "cb1b981295801953596756e4289e76bc",
+                    "value": "Sim"
+                },
+                {
+                    "id": "03cf509f48333998426370885a5bce2c",
+                    "value": "6712"
+                }
+            ]
+        },
+        {
+            "id": "9da7cb09b1208708ed8d0cb18a105e63",
+            "name": "TAYNAN DE MORAES MAZZONI",
+            "phone": "5517992286753",
+            "email": "taynan.mazzoni@gmail.com",
+            "updatedAt": "2024-08-10T03:55:11.000Z",
+            "createdAt": "2024-08-10T03:55:11.000Z",
+            "customFields": [
+                {
+                    "id": "3393acec2c25dc21cd0be1a9a96eefd5",
+                    "value": "13/08/2024"
+                },
+                {
+                    "id": "5e1397fd3b44b6f71b62ba9942aa8c8e",
+                    "value": "ATIVO"
+                },
+                {
+                    "id": "a95afc4f82126d2cae1ba51590744214",
+                    "value": "null"
+                },
+                {
+                    "id": "dd8c6a4819b484f22fe54cbe80b3c5fc",
+                    "value": "LOJAS"
+                },
+                {
+                    "id": "dea8f28106184ba46a6fd1bb1f539337",
+                    "value": "0"
+                },
+                {
+                    "id": "e92bbb5ae8ca252cec61cdd56eda8f7e",
+                    "value": "VENDEDOR"
+                },
+                {
+                    "id": "cb1b981295801953596756e4289e76bc",
+                    "value": "Sim"
+                },
+                {
+                    "id": "03cf509f48333998426370885a5bce2c",
+                    "value": "6713"
+                }
+            ]
+        },
+        {
+            "id": "60b15f7a9fc363cd0a4fa302212079cc",
+            "name": "MELISSA ARRUDA LEITE DA SILVA",
+            "phone": "5519983584141",
+            "email": "melissa.arruda0@gmail.com",
+            "updatedAt": "2024-08-10T03:55:11.000Z",
+            "createdAt": "2024-08-10T03:55:11.000Z",
+            "customFields": [
+                {
+                    "id": "3393acec2c25dc21cd0be1a9a96eefd5",
+                    "value": "13/08/2024"
+                },
+                {
+                    "id": "5e1397fd3b44b6f71b62ba9942aa8c8e",
+                    "value": "ATIVO"
+                },
+                {
+                    "id": "a95afc4f82126d2cae1ba51590744214",
+                    "value": "null"
+                },
+                {
+                    "id": "dd8c6a4819b484f22fe54cbe80b3c5fc",
+                    "value": "MATRIZ"
+                },
+                {
+                    "id": "dea8f28106184ba46a6fd1bb1f539337",
+                    "value": "2"
+                },
+                {
+                    "id": "e92bbb5ae8ca252cec61cdd56eda8f7e",
+                    "value": "ANALISTA DE PRODUCT OWNER DE TI SR"
+                },
+                {
+                    "id": "cb1b981295801953596756e4289e76bc",
+                    "value": "Sim"
+                },
+                {
+                    "id": "03cf509f48333998426370885a5bce2c",
+                    "value": "6714"
+                }
+            ]
+        },
+        {
+            "id": "99d1e5a80feb30df1aba5b723561c93c",
+            "name": "NATALIA MAZZONI ARCHAPA MOURA",
+            "phone": "5511992466402",
+            "email": "natmazzoni.archapa@gmail.com",
+            "updatedAt": "2024-08-10T03:55:11.000Z",
+            "createdAt": "2024-08-10T03:55:11.000Z",
+            "customFields": [
+                {
+                    "id": "3393acec2c25dc21cd0be1a9a96eefd5",
+                    "value": "13/08/2024"
+                },
+                {
+                    "id": "5e1397fd3b44b6f71b62ba9942aa8c8e",
+                    "value": "ATIVO"
+                },
+                {
+                    "id": "a95afc4f82126d2cae1ba51590744214",
+                    "value": "null"
+                },
+                {
+                    "id": "dd8c6a4819b484f22fe54cbe80b3c5fc",
+                    "value": "MATRIZ"
+                },
+                {
+                    "id": "dea8f28106184ba46a6fd1bb1f539337",
+                    "value": "2"
+                },
+                {
+                    "id": "e92bbb5ae8ca252cec61cdd56eda8f7e",
+                    "value": "ANALISTA DE PRODUCT OWNER DE TI SR"
+                },
+                {
+                    "id": "cb1b981295801953596756e4289e76bc",
+                    "value": "Sim"
+                },
+                {
+                    "id": "03cf509f48333998426370885a5bce2c",
+                    "value": "6715"
+                }
+            ]
+        }
+    ],
+    "message": "Sucesso"
 }

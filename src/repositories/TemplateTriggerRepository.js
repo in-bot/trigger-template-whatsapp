@@ -1,10 +1,10 @@
 const db = require("../config/dbWhatsApp");
 
 module.exports = {
-    getByStatus: () => {
+    getByStatus: (channel) => {
         return new Promise((accept, reject) => {
             db.query(
-                "SELECT * FROM templateTriggering where status = 'aguardando';",
+                "SELECT * FROM templateTriggering WHERE status = 'aguardando' AND channel=?;",[channel],
                 (error, results) => {
                     if (error) {
                         return reject("Request getAll error");
