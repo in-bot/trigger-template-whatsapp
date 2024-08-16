@@ -4,7 +4,7 @@ module.exports = {
   async getAllClients(id, value) {
     try {
 
-      const url = `localhost:19000/customer-manager/find-customer/with-params?id=${id}&value=${value}`;
+      const url = `https://api.inbot.com.br/user-manager/v1/customer-manager/find-customer/with-params?id=${id}&value=${value}`;
 
       const response = await axios.get(url);
       return response;

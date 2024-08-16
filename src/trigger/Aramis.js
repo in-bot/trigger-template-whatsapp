@@ -16,7 +16,7 @@ async function triggerRulesAramisTestes() {
         console.log(util.nextWeekEnd())
         console.log(util.nextWeekStart())
         try {
-            const _customer = await axios.get('http://localhost:19000/customer-manager/customer-by-week/botId/744', {
+            const _customer = await axios.get('https://api.inbot.com.br/user-manager/v1/customer-manager/customer-by-week/botId/744', {
               params: {
                 startDate: util.nextWeekStart(),
                 endDate: util.nextWeekEnd(),
