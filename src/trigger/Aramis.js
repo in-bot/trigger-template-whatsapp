@@ -28,20 +28,20 @@ async function triggerRulesAramisTestes() {
             const customersLojas = filterTypeCompany(customer,'LOJAS')
             const customersCD = filterTypeCompany(customer,'MATRIZ')
             const customersMatriz = filterTypeCompany(customer,'CD')
-            createTriggerAramis(5,0, customer, "01", "ONB_1_OPTOUT", 2);
-            createTriggerAramis(5,0, customer, "2", "ONB_2_MENS_CEO", 3);
-            createTriggerAramis(5,0, customer, "03", "ONB_3_EXP_LOJA", 4);
-            createTriggerAramis(5,0, customer, "04", "ONB_4_PONTO", 5);
-            createTriggerAramis(5,0, customer, "05", "ONB_5_PERFORM", 6);
-            createTriggerAramis(5,0, customer, "06", "ONB_6_PILAR1", 9);
-            createTriggerAramis(5,0, customer, "07", "ONB_7_HISTORIA", 10);
-            createTriggerAramis(5,0, customer, "08", "ONB_8_ARAMIS", 11);
-            createTriggerAramis(5,0, customer, "09", "ONB_9_LINHAS", 12);
-            createTriggerAramis(5,0, customer, "010", "ONB_10_LIDERANCA", 13);
-            createTriggerAramis(5,0, customer, "11", "MENU_SUSTENTABILIDADE_BOTOES", 16);
-            createTriggerAramis(14,0, customersCD, "formulario", "ONB_AV_INST_P1", 3); // APENAS MATRIZ OU CD
-            createTriggerAramis(14,0, customersMatriz, "formulario", "ONB_AV_INST_P1", 3); // APENAS MATRIZ OU CD
-            createTriggerAramis(14,0, customersLojas, "formulario", "ONB_AV_INST_P1", 4); // APENAS LOJAS
+            createTriggerAramis(5,0, customer, "01", "ONB_1_OPTOUT", 2, "Boas Vindas");
+            createTriggerAramis(5,0, customer, "2", "ONB_2_MENS_CEO", 3, "Mensagem CEO");
+            createTriggerAramis(5,0, customer, "03", "ONB_3_EXP_LOJA", 4, "Primeiros Passos");
+            createTriggerAramis(5,0, customer, "04", "ONB_4_PONTO", 5, "Benefícios");
+            createTriggerAramis(5,0, customer, "05", "ONB_5_PERFORM", 6, "Treinamentos");
+            createTriggerAramis(5,0, customer, "06", "ONB_6_PILAR1", 9, "Cultura");
+            createTriggerAramis(5,0, customer, "07", "ONB_7_HISTORIA", 10, "História e Evolução");
+            createTriggerAramis(5,0, customer, "08", "ONB_8_ARAMIS", 11, "Aramis vs. Urban");
+            createTriggerAramis(5,0, customer, "09", "ONB_9_LINHAS", 12, "Linhas de Roupas");
+            createTriggerAramis(5,0, customer, "010", "ONB_10_LIDERANCA", 13, "Estrutura das Áreas");
+            createTriggerAramis(5,0, customer, "11", "MENU_SUSTENTABILIDADE_BOTOES", 16, "Sustentabilidade");
+            createTriggerAramis(14,0, customersCD, "formulario", "ONB_AV_INST_P1", 3, "Avaliação Institucional"); // APENAS MATRIZ OU CD
+            createTriggerAramis(14,0, customersMatriz, "formulario", "ONB_AV_INST_P1", 3, "Avaliação Institucional"); // APENAS MATRIZ OU CD
+            createTriggerAramis(14,0, customersLojas, "formulario", "ONB_AV_INST_P1", 4, "Avaliação Institucional"); // APENAS LOJAS
         } catch (error) {
             console.error('Error fetching customer data:', error.message);
             throw error; // Re-throws the error after logging it
@@ -62,7 +62,7 @@ function filterTypeCompany(customers,type) {
 
 }
 
-async function createTriggerAramis(hour, minute, customers, step, payload, triggerDate) {
+async function createTriggerAramis(hour, minute, customers, step, payload, triggerDate, tagName) {
     const date = Math.floor(new Date().getTime() / 1000);
     const horario = new Date();
     horario.setDate(horario.getDate() + triggerDate)
@@ -75,7 +75,8 @@ async function createTriggerAramis(hour, minute, customers, step, payload, trigg
         "timeTrigger": horario,
         "status": "aguardando",
         "botId": 744,
-        "phoneTrigger": '551151285447'
+        "phoneTrigger": '551151285447',
+        "tag": tagName
     };
     
     console.log(data);
