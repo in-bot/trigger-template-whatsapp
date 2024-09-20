@@ -1,6 +1,7 @@
 const util = require("../utils/util");
 const axios = require("axios");
 const organicos = require("../repositories/OrganicosDeFatimaRepository");
+const TemplateTriggerRepository = require("../repositories/TemplateTriggerRepository");
 // const mock = require("../mock/organicos.json")
 
 const createCustomerOnTable = async (customer) => {
@@ -96,7 +97,7 @@ async function createTriggerOrganicos(hour, customers) {
     templateName: `base_cliente_3`,
     typeTrigger: "agendado",
     timeTrigger: horario,
-    status: "aguardando",
+    status: "criando",
     botId: 752,
     phoneTrigger: "5521966056479",
   };
@@ -108,6 +109,7 @@ async function createTriggerOrganicos(hour, customers) {
       "https://webhooks.inbot.com.br/inbot-adm-back/v1/gateway/whatsapp/trigger",
       data
     );
+    const campaignId = resp.data.data.insertId;
     for (const element of customers) {
       await util.sleep(5);
       console.log("==============+++++++++++++++++++++++++++++");
@@ -130,6 +132,7 @@ async function createTriggerOrganicos(hour, customers) {
       );
       console.log("Solicitação enviada com sucesso!");
     }
+    await TemplateTriggerRepository.updateCampaign(campaignId, "aguardando");
   } catch (error) {
     console.error("Erro ao enviar solicitação:", error);
   }
