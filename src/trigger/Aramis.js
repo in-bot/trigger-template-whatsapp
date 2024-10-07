@@ -144,6 +144,15 @@ async function triggerRulesAramisTestes() {
         4,
         "Avaliação Institucional"
       ); // APENAS LOJAS
+      createTriggerAramis(
+        14,
+        0,
+        customer,
+        "psa",
+        "PS_INTRO_DISPARO",
+        31,
+        "PS_INTRO_DISPARO"
+      );
     } catch (error) {
       console.error("Error fetching customer data:", error.message);
       throw error; // Re-throws the error after logging it
